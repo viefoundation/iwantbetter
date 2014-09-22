@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>I WANT BETTER</title>
+        <meta name="description" content="A Better Way to Talk About the Abortion Topic.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+        <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <script src="{{ asset('js/vendor/modernizr-2.6.2.min.js') }}"></script>
+    </head>
+    <body ng-app="iwantbetter">
+
+        <div class="hamburger">
+            <div class="patty"></div>
+            <div class="patty"></div>
+            <div class="patty"></div>
+        </div>
+
+        <nav>
+            <ul>
+                <li>Gallery Video</li>               
+                <li>Read More</li>
+                <li>For You</li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-info">
+            <p class="version-info">V - 1.0</p>
+            <p class="fine-print">Public Domain 2014</p>
+        </div>
+
+        <div class="video-container">
+            <video id="walkthrough-video" src="{{ asset('img/walkthrough.mp4') }}" autoplay loop muted>
+                Your browser does not support this video. Please upgrade to a modern browser.
+            </video>
+        </div>
+
+        <div class="container">
+
+            <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <div class="hero">
+               
+                <div class="hero-content-container">
+                    <p class="heading uppercase"><span class="bold">Nobody really likes abortion</span>, so to be for something
+                        better should be alot easier than it is.</p>
+                    
+                    <div class="read-more-button"><p>READ MORE</p></div>
+                </div>
+
+                <div class="arrow-down"><i class="fa fa-angle-down"></i></div>
+
+                <div class="twitter-share-video">
+                    <a href="https://twitter.com/share?url=http%3A%2F%2Fwww.vimeo.com%2F105067552&amp;text=A%20Better%20Way%20to%20Talk%20About%20Abortion." target="_blank" class="share-to-twitter"><i class="fa fa-twitter"></i></a>
+                </div>
+
+            </div>
+            
+            <!-- include paragraphs -->
+            <div class="paragraphs-background">
+                @include ('paragraphs');
+            </div>
+            
+            <div class="paragraphs-section-progress"><span id="percentage">0</span>%</div>
+            
+            <div class="footer">
+
+                <div class="form-container" ng-controller="FormController">
+
+                    <p class="tagline">Like what you see, Want a sticker?</p>
+
+                    <form ng-submit="submit()">
+                        <p><input class="inputs" type="text" name="full_name" placeholder="Full Name" ng-model="submission.fullName"></p>
+                        <p><input class="inputs" type="text" name="address" placeholder="Shipping Address" ng-model="submission.address"></p>
+                        <p><input class="inputs" type="text" name="address_2" placeholder="City St. Zip Country" ng-model="submission.address2"></p>
+                        <p class="submit-line"><input class="email-input" type="text" name="email" placeholder="Email Address" ng-model="submission.email">
+                        <button type="submit">Yes <span>Please!</span><div class="slanted-line"></div></button></p>
+                    </form>
+
+                    <div class="success-overlay" ng-show="successPrompt">
+
+                        <div class="center">
+                            <p class="heading">Sticker Request Successfully Sent!</p>
+
+                            <p class="sub-heading">Would You like to hear from<br> I Want Better in the future?</p>
+
+                            <p class="choices"><span ng-click="subscribe()">YES</span> / <span ng-click="hideOverlay()">NO</span></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="call-to-action">
+                    <p class="letter-tape">&nbsp;&nbsp;<span class="regular">Be Inspired.</span>&nbsp;</p><br>
+                    <p class="letter-tape">&nbsp;&nbsp;Use Information.&nbsp;</p><br>
+                    <p class="letter-tape">&nbsp;&nbsp;Inspire Others.&nbsp;</p>
+                    <p>www.iwantbetter.org</p>
+                </div>
+
+                <div class="footer-links">
+                    <p><span class="bold">$</span> <span class="faded">|</span> ILIKE@IWANTBETTER.ORG <span class="faded">|</span> STYLE GUIDE <span class="faded">|</span> CORPORATE PARTNERSHIP <span class="faded">|</span> PRIVACY POLICY <span class="faded">|</span> PRESS RELEASE <span class="faded">|</span> VIE - <span class="faded">501(c)(3)NON PROFIT ORG.</span></p>
+                    <p>Public Domain 2014 - Free to Use by All.</p>
+                </div>
+
+            </div>
+
+           
+
+        </div>
+        
+
+        
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="{{ asset('js/vendor/angular.min.js') }}"></script>
+        <script src="{{ asset('js/vendor/velocity.min.js') }}"></script>
+        <script src="{{ asset('js/plugins.js') }}"></script>
+        <script src="{{ asset('js/main.js') }}"></script>
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
