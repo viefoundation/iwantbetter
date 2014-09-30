@@ -23,3 +23,7 @@ body, html {
 div, span, p, a{
 	-webkit-font-smoothing:antialiased;
 }
+
+a {
+	color:inherit;
+}

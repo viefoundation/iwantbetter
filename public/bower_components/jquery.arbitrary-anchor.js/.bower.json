@@ -1,0 +1,14 @@
+{
+  "name": "jquery.arbitrary-anchor.js",
+  "homepage": "https://github.com/briangonzalez/jquery.arbitrary-anchor.js",
+  "_release": "3cc5f6c382",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "3cc5f6c382a0f3e7092a48a21d77c40610c0de2e"
+  },
+  "_source": "git://github.com/briangonzalez/jquery.arbitrary-anchor.js.git",
+  "_target": "*",
+  "_originalSource": "briangonzalez/jquery.arbitrary-anchor.js",
+  "_direct": true
+}

@@ -8,6 +8,7 @@ $twitter : #56A0D8;
 $pinterest : #CA2026;
 $gray : #F0F1F2;
 $yellow : #F9E400;
+$green : #24A349;
 
 //Mixins
 @mixin center {
@@ -106,12 +107,16 @@ $yellow : #F9E400;
 .faded {
 	opacity: .3;
 }
-
+.green {
+	color:$green;
+}
 
 
 html, body {
 
 	background-color: $gray;
+	overflow:hidden;
+	-webkit-overflow-scrolling: touch;
 	
 }
 
@@ -124,13 +129,20 @@ html, body {
 	position: relative;
 	z-index: 2;
 	// background-color: white;
+	-webkit-overflow-scrolling: touch;
 
 }
 
 .hero {
 	width:100%;
 	height:100%;
-	overflow: auto;
+	overflow: hidden;
+	position: relative;
+
+	@include breakpoint(medium) {
+		background-image: url(../img/gold.jpg);
+		background-size: cover;
+	}
 
 
 
@@ -140,8 +152,9 @@ html, body {
 
 .video-container {
 
-	background-color: black;
+	background-color: white;
 	// @include center;
+	background-image: none;
 	top:0;
 	left:0;
 	overflow: hidden;
@@ -153,12 +166,19 @@ html, body {
 	@include stretchpoint(400px) {
 		width:100%;
 		height:100%;
+		
+
 	}
+
+	
 
 	#walkthrough-video {
 		width:100%;
 		// position: fixed;
-		
+
+		@include breakpoint(medium) {
+			display: none;
+		}
 		
 	}
 
@@ -174,12 +194,22 @@ html, body {
 	color:white;
 	// @include transition(bottom .2s ease);
 
+	@include breakpoint(small) {
+		width:75%;
+		left:35px;
+		bottom: 15%;
+	}
+
 	p {
 		margin-bottom: 20px;
 	}
 
 	.heading {
 		font-size: 2.3rem;
+
+		@include breakpoint(small) {
+			font-size: 1.5rem;
+		}
 	}
 
 	.sub-heading {
@@ -191,13 +221,31 @@ html, body {
 		height:45px;
 		border:solid 1px white;
 		display: table;
-		
+		margin-bottom: 15px;
+		color:white;
+		cursor: pointer;
+		@include transition(all .15s linear);
+
+		&:hover {
+			background-color: white;
+
+			color:black;
+		}		
 
 		p {
 			display: table-cell;	
 			text-align: center;
 			vertical-align: middle;
+			
 
+		}
+	}
+
+	#video-button {
+		display: none;
+
+		@include breakpoint(small) {
+			display: table;
 		}
 	}
 
@@ -218,6 +266,10 @@ html, body {
 	position: relative;
 	margin:75px auto;
 
+	@include breakpoint(small) {
+		width:75%;
+	}
+
 	h2 {
 		font-family: $opensans;
 		color:black;
@@ -226,6 +278,11 @@ html, body {
 		margin: 60px 0 20px 0;
 		letter-spacing: -1px;
 		line-height: 3rem;
+
+		@include breakpoint(small) {
+			font-size: 2rem;
+			line-height: 2.5rem;
+		}
 	}
 	
 
@@ -239,9 +296,31 @@ html, body {
 	}
 
 	img {
-		width:100%;
-		margin:75px 0;
+		width:65%;
+		display: block;
+		margin:275px auto 15px auto;
 	}
+
+	.paragraph-twitter {
+		color:#979A9D;
+
+		&:hover {
+			color:$twitter;
+		}
+	}
+
+	.image-description {
+		display: block;
+		margin:0 auto;
+		text-transform: uppercase;
+		text-align: center;
+		font-family: $opensans;
+		color:gray;
+		font-size: 1.1rem;
+		font-weight: normal;
+	}
+
+
 }
 
 
@@ -255,6 +334,12 @@ html, body {
 	font-weight: 300;
 	color:black;
 	display: none;
+
+	@include breakpoint(small) {
+		font-size: 1rem;
+		right:5px;
+		bottom: 5px;
+	}
 
 }
 
@@ -520,6 +605,14 @@ $padding-half : $padding / 2;
 	height:18px;
 	cursor:pointer;
 
+	@include breakpoint(small) {
+		top:15px;
+		left:7px;
+		width:27px;
+		height:15px;
+		
+	}
+
 
 	.patty {
 		width:100%;
@@ -577,6 +670,10 @@ nav {
 
 	}
 
+	.viewing {
+		color:gray;
+	}
+
 }
 
 .sidebar-info {
@@ -598,12 +695,36 @@ nav {
 
 .arrow-down {
 	@include center;
-	top:98%;
+	top:97.5%;
 
-	i {
-		color: white;
-		font-size: 2rem;
+	img {
+		width:40px;
 	}
+}
+
+.twitter-share-video-text {
+	@include center;
+	width:400px;
+	display: none;
+	z-index: 6;
+}
+
+.twitter-share-video-overlay {
+	background-color: $twitter;
+	width:2000px;
+	height:2000px;
+	position: absolute;
+	top:35%;
+	left:50%;
+	z-index:4;
+	@include transform(scale3d(0.001,0.001,1));
+	@include transition(all .4s ease);
+	border-radius: 50%;
+
+}
+
+.twitter-share-video-overlay-enlarge {
+	@include transform(scale3d(3, 3, 1));
 }
 
 .twitter-share-video {
@@ -611,12 +732,17 @@ nav {
 	position:absolute;
 	bottom:15px;
 	right:15px;
+	z-index: 8;
 
 	i {
 		display: block;
 		color:white;
 		font-size: 2.2rem;
 		margin-top: 7px;
+	}
+
+	@include breakpoint(1000px) {
+		display: none;
 	}
 
 }
@@ -644,6 +770,11 @@ nav {
 		margin:50px 60px;
 		// @include box-sizing(border-box);
 
+		@include breakpoint(1000px) {
+			float:none;
+			margin: 50px 30px;
+		}
+
 	}
 
 	.call-to-action {
@@ -656,19 +787,38 @@ nav {
 		.letter-tape {
 			background-color: black;
 			color:white;
-			
 			font-size: 3rem;
 			text-align: right;
 			display: inline-block;
 			margin-bottom: 10px;
 			font-weight: 300;
+
+			@include breakpoint(1000px) {
+				font-size: 2rem;
+				text-align: center;
+			}
 		}
 
 		p:last-child {
 			font-size: 2.2rem;
 			font-weight: 300;
 			margin-top: 30px;
+
+			@include breakpoint(1000px) {
+				font-size: 1.8rem;
+			}
 		}
+
+		@include breakpoint(1000px) {
+			float:none;
+			text-align: center;
+			margin:50px auto 200px auto;
+		}
+	}
+
+	@include breakpoint(1000px) {
+		height:auto;
+		overflow: auto;
 	}
 
 }
@@ -730,12 +880,19 @@ form {
 	border-bottom: solid 1px black;
 	width:500px;
 	background-color: transparent;
+	border-radius: 0;
 
 	@include placeholder {
 		color:black;
 	}
 
 	@include ellipsis;
+
+	@include breakpoint(1000px) {
+		width:100%;
+		font-size: 1.5rem;
+		margin-top: 10px;
+	}
 
 }
 
@@ -755,14 +912,29 @@ form {
 		color:black;
 	}
 
+	@include breakpoint(1000px) {
+		font-size: 1.5rem;
+		margin-bottom: 20px;
+		border-radius: 0;
+		margin-top: 10px;
+		border-bottom: solid 1px black;
+
+	}
+
 }
 
 .submit-line {
 	margin-top: 50px;
+
+	@include breakpoint(1000px) {
+		margin-top: 0px; 
+	}
+
 }
 
 button {
 	position: relative;
+	font-family: $opensans;
 	float:right;
 	display: block;
 	@include appearance(none);
@@ -791,6 +963,10 @@ button {
 	    height: 0;
 	    border-top: 45px solid $gray;
 	    border-right: 20px solid transparent;
+
+	    @include breakpoint(1000px) {
+	    	display: none;
+	    }
 	}
 
 	.slanted-line {
@@ -802,10 +978,20 @@ button {
 		left:10px;
 
 		@include transform(rotate(25deg));
+
+		@include breakpoint(1000px) {
+			display: none;
+		}
 	}
 
 	&:focus {
 		outline:none;
+	}
+
+	@include breakpoint(1000px) {
+		float:none;
+		width:100%;
+		// margin-top: 20px;
 	}
 }
 
@@ -822,11 +1008,683 @@ button {
 	p:first-child {
 		float:left;
 
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+
+
+		}
+
 	}
+
 	p:last-child {
 		float:right;
 	}
+
+	@include breakpoint(1000px) {
+		font-size: .7rem;
+	}
 }
+
+
+.back-to-top {
+	position: fixed;
+	z-index: 6;
+	top:15px;
+	right:7px;
+	width: 30px;
+	@include transform(rotate(180deg));
+	display: none;
+}
+
+
+// Information section styles.
+
+
+.info-body, .info-html {
+	background-color: $gray;
+	width:100%;
+	overflow-x:hidden;
+	// height:auto;
+	// overflow: auto;
+
+	nav {
+		// z-index: -2;
+		top:80px;
+
+		ul {
+
+			li {
+				font-size: 1.2rem;
+			}
+
+		}
+	}
+}
+
+
+.info-nav {
+	background-color: #EBEBEC;
+	width:100%;
+	height:100px;
+	position: relative;
+	z-index: 9;
+
+	@include breakpoint(1000px) {
+		height:70px;
+	}
+
+	ul {
+		margin:0 auto;
+		@include center;
+		list-style:none;
+    	white-space: nowrap;
+
+    	@include breakpoint(1000px) {
+    		display: none;
+    	}
+	}
+
+	li {
+		display: inline;
+		font-family: $opensans;
+		color:#979A9D;
+		font-size: 1.1rem;
+		margin: 0 40px;
+		text-transform: uppercase;
+
+		a {
+			color:#979A9D;
+		}
+	}
+
+}
+
+
+.info-container {
+	width:100%;
+	height:auto;
+	background-color: white;
+	position: relative;
+	z-index: 12;
+	min-height: 100%;
+}
+
+.info-header {
+	font-family: $opensans;
+	color: gray;
+	font-size: 1.5rem;
+	@include center;
+	top:47.5%;
+	left:120px;
+	text-align: left;	
+	display: none;
+	font-weight: bold;
+
+	@include breakpoint(1000px) {
+		display: block;
+	}
+}
+
+.info-hamburger {
+	position: fixed;
+	z-index: 777;
+	width:33px;
+	height:18px;
+	cursor:pointer;
+
+	display: none;
+
+	@include breakpoint(1000px) {
+		top:25px;
+		left:25px;
+		display: block;
+		
+	}
+
+
+	.patty {
+		width:100%;
+		height:2px;
+		background-color: black;
+		border-radius: 500px;
+		@include transition(all .15s ease);
+
+		&:first-child {
+			position: absolute;
+			top:0;
+			left:0;
+		}
+
+		&:nth-child(2) {
+			@include center;
+		}
+
+		&:last-child {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+
+	}	
+
+	.dark {
+		background-color: black;
+	}
+
+	.tilt-up {
+		@include transform(rotate(45deg));
+		width:70%;
+	}
+
+	.tilt-down {
+		@include transform(rotate(-45deg));
+		width:70%;
+	}
+
+}
+
+.temp-message {
+	@include center;
+	left:40%;
+	top:30%;
+	font-family: $opensans;
+	font-weight: 300;
+	font-size: 2.5rem;
+	line-height: 2.7rem;
+	z-index: 99999;
+
+	p:first-child {
+		color:#979A9D;
+	}
+
+	p:last-child {
+		color:darken($gray, 10%);
+	}
+
+	@include breakpoint(1000px) {
+		@include center;
+		top:120px;
+		font-size: 1.7rem;
+	}
+
+}
+
+.gear-container {
+	width:100%;
+	height:100%;
+	position: absolute;
+	top:0;
+	left:0;
+	overflow: hidden;
+
+}
+
+.gear-1 {
+	position: absolute;
+	top:43%;
+	left:-5%;
+	width:22%;
+	@include animation(gearSpinForward 20s linear infinite);
+
+	@include breakpoint(1000px) {
+		display: none;
+	}
+
+}
+
+.gear-2 {
+	position: absolute;
+	top:73%;
+	left:10%;
+	width:25%;
+	@include animation(gearSpinBackward 20s linear infinite);
+	@include breakpoint(1000px) {
+		display: none;
+	}
+}
+
+.gear-3 {
+	position: absolute;
+	top:53%;
+	left:34%;
+	width:33%;
+	@include animation(gearSpinForward 20s linear infinite);
+
+	@include breakpoint(1000px) {
+		top:80%;
+		left:-10%;
+		width:50%;
+	}
+}
+
+.gear-4 {
+	position: absolute;
+	top:38%;
+	left:65%;
+	width: 35%;
+	@include animation(gearSpinBackward 20s linear infinite);
+
+	@include breakpoint(1000px) {
+		top:60%;
+		left:35%;
+		width:70%;
+	}
+}
+
+.gear-5 {
+	position: absolute;
+	top:13%;
+	left:90%;
+	width:18%;
+	@include animation(gearSpinForward 20s linear infinite);
+	
+	@include breakpoint(1000px) {
+		top:40%;
+		left:75%;
+		width:35%;
+	}
+
+}
+
+
+
+
+@include keyframes(gearSpinForward) {
+	100% {
+		@include transform(rotate(360deg));
+	}
+}
+
+@include keyframes(gearSpinBackward) {
+	100% {
+		@include transform(rotate(-360deg));
+	}
+}
+
+
+.privacy-content {
+	width:780px;
+	margin:70px auto;
+	
+
+	h2 {
+		font-family: $opensans;
+		font-weight: 300;
+		font-size: 2.5rem;
+		color:darken($gray, 10%);
+		margin-bottom: 20px;
+
+		@include breakpoint(1000px) {
+			font-size: 1.5rem;
+		}
+	}
+
+	p {
+
+		font-family: $opensans;
+		font-weight: 400;
+		font-size: 1rem;
+		color:#979A9D;
+		margin-bottom: 20px;
+
+	}
+
+	@include breakpoint(1000px) {
+		width:100%;
+		padding: 40px;
+		@include box-sizing(border-box);
+		margin:0;
+	}
+}
+
+.giving-container {
+
+	width:1000px;
+	height:auto;
+	margin:50px auto 0px auto;
+	padding-bottom: 50px;
+	overflow: auto;
+
+	@include breakpoint(1000px) {
+		width:100%;
+		margin-top: 0;
+	}
+
+
+	.column-left {
+		float:left;
+		width:40%;
+		padding: 0 20px 0 0;
+		@include box-sizing(border-box);
+
+		h2 {
+			font-family: $opensans;
+			font-weight: 400;
+			font-size: 2.2rem;
+			line-height: 2.75rem;
+			color:$green;
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-family: $opensans;
+			font-weight: 400;
+			font-size: 1.1rem;
+			color:#979A9D;
+			margin-bottom: 20px;
+		}
+
+		.email {
+			font-weight: 300;
+			font-size: 2.5rem;
+			color:darken($gray, 10%);
+
+			@include breakpoint(1000px) {
+				font-size: 1.75rem;
+			}
+		}
+
+		@include breakpoint(1000px) {
+			width:100%;
+			padding: 40px;
+			float:none;
+		}
+	}
+
+	.column-right {
+		width:42%;
+		float:right;
+		position: relative;
+		// padding: 0 0 0 70px;
+		// @include box-sizing(border-box);
+
+		@include breakpoint(1000px) {
+			@include box-sizing(border-box);
+			width:100%;
+			padding: 40px;
+			float:none;
+		}
+
+
+		.form_style {
+			width:100%;
+			height:auto;
+			overflow:auto;
+			// position:absolute;
+			// left:50%;
+			// top:50%;
+			// margin:-300px 0 0 -450px;
+		}
+		.form_style p{
+			
+			// width:400px;
+			width:auto;
+			height:40px;
+			margin-bottom:20px;
+
+
+			@include breakpoint(1000px) {
+				width:100%;
+			}
+
+		}
+		.form_style label:not(#exp) {
+			display:none;
+		}
+		#exp {
+			border:none;
+		}
+		label {
+			font-family:$opensans;
+			font-weight: 100;
+			letter-spacing: 1px;
+			font-size:25px;
+			border-bottom:solid gray thin;
+			padding-bottom:2px;
+		}
+		.form_style input{
+			background-color:rgba(0,0,0,0);
+			border:none;
+			border-bottom: solid gray thin;
+			-webkit-transition:all ease-in-out .2s;
+			-moz-transition:all ease-in-out .2s;
+			color:black;
+			width:100%;
+			font-size:2.2rem;
+			font-family:$opensans;
+			font-weight: 100;
+			letter-spacing: -1px;
+			border-radius: 0px;
+
+			@include breakpoint(1000px) {
+				font-size: 1.5rem;
+			}
+		}
+		.form_style input:focus {
+			/*background-color:rgba(255,255,255,.5);*/
+			outline:none;
+		}
+		#submit_button {
+			border: solid $green thin;
+			background-color: $green;
+			width:100%;
+			height:55px;
+			// float:right;
+			font-size:2rem;
+			font-weight:100;
+			// float:right;
+			// margin-top:-105px;
+			cursor:hand;
+			color:white;
+			border-radius: none;
+			@include appearance(none);
+		}
+
+		/*NAME*/
+		.give-name {
+			float:left;	
+			width:100% !important;	
+		}
+		/*MAILING ADDRESS*/
+		.give-address {
+			float: left;
+			width:100% !important;
+		}
+		/*EMAIL ADDRESS */
+		.give-email {
+			float: left;
+			width:100% !important;
+		}
+		/*CITY*/
+		.give-city {
+			width:48% !important;
+			float:left;
+			// margin-left:90px;
+			margin-right: 10px;
+
+			@include breakpoint(1000px) {
+				width:100% !important;
+			}
+		}
+		/*STATE*/
+		.give-state {
+			width:48%!important;
+			float:left;
+			@include breakpoint(1000px) {
+				width:100% !important;
+			}
+		}
+		/*CREDIT CARD NUMBER*/
+		.give-card {
+			width:100% !important;
+			float:left;
+		}
+		/*ZIP CODE*/
+		.give-zip {
+			float:left;
+			width:100% !important;
+		}
+		/*EXPIRES*/
+		.give-expires {
+			float: left;
+			width:225px;
+		}
+		/*CVV*/
+		.give-cvv {
+			float:right;
+			// width:150px;
+			width: 40% !important;
+			// margin-left:25px;
+
+			@include breakpoint(1000px) {
+				width:100% !important;
+			}
+		}
+		/*AMOUNT*/
+		.give-amount {
+			width:100%;
+		}
+		#amount {
+			width:100%;
+			font-size:25px;
+			font-family:$opensans;
+			font-weight:100;
+			border-bottom:solid gray thin;
+			letter-spacing: 1px;
+			clear:both;
+			// text-align:
+
+			@include breakpoint(1000px) {
+				font-size: 18px;
+			}
+		}
+		#amount span{
+			font-size:15px;
+			margin-left:-5px;
+
+			@include breakpoint(1000px) {
+				font-size: 8px;
+			}
+		}
+		#expiration_month {
+			width:80px;
+			text-align: center;
+		}
+		#expiration_year {
+			width:80px;
+			text-align: center;
+			float:right;
+		}
+		#city {
+			width:100%;
+		}
+		#state {
+			width:100%;
+		}
+		#cvv {
+			width:100%;
+			text-align: left;
+		}
+		#selector {
+			width: auto;
+			background:transparent;
+			font-family:$opensans;
+			font-weight:100;
+			color:gray;
+			font-size:25px;
+			-webkit-appearance:none;
+			-moz-appearance:none;
+			outline:none;
+			border-radius:0px;
+			border:none;
+		}
+		#selector:focus {
+			outline: none;
+			border:none;
+		}
+		#selector option {
+			background:transparent;
+			color:gray;
+			font-size:25px;
+			-webkit-appearance:none;
+			-moz-appearance:none;
+			text-indent: 0.01px;
+		    text-overflow: '';
+		}
+		.amount_text {
+			// position:absolute;
+			font-family:$opensans;
+			color:gray;
+			font-size:15px;
+			width:100%;
+			float:left;
+			height:40px;
+			line-height: 100%;
+			// top:380px;
+			font-weight:100;
+
+			a {
+				color:inherit;
+			}
+		}
+		#address_text {
+			// position:absolute;
+			font-family:$opensans;
+			font-size:15px;
+			width:auto;
+			// top:214px;
+			// left:495px;
+			font-weight:100;
+			width:100%;
+
+		}
+		#contribute_text {
+			position:absolute;
+			font-family:$opensans;
+			font-size:15px;
+			width:auto;
+			left:525px;
+			top:385px;
+			text-align:center;
+			font-weight:100;
+
+		}
+
+		#one-time {
+			float:left;
+			width:100%;
+			color:gray;
+			text-decoration: none;
+			font-family: $opensans;
+
+			/*-webkit-font-smoothing:antialiased;*/
+			letter-spacing: 0px;
+		}
+
+
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

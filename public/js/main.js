@@ -76,10 +76,30 @@ app.controller('FormController', function($scope, $http) {
 });
 
 
+app.controller('NavController', function($scope) {
+
+	$scope.atHero = false;
+	$scope.atParagraphs = false;
+	$scope.atFooter = false;
+
+});
+
+
+
+
 var requestAnimationFrame = window.requestAnimationFrame || 
                             window.mozRequestAnimationFrame || 
                             window.webkitRequestAnimationFrame ||
                             window.msRequestAnimationFrame;
+
+
+function mobile() {
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 
 var Squares = {
@@ -264,6 +284,26 @@ var Nav = {
 		var _ = this;
 
 		_.listeners($(".hamburger"));
+		_.positionTracking();
+		_.smoothScroll();
+
+	},
+
+	smoothScroll : function() {
+
+		$('a[href*=#]').bind('click', function() {
+		     
+		    var target = $(this).attr("href");
+
+		    var distance = $(target).offset().top - $(target).parent().offset().top + $(target).parent().scrollTop();
+		    		
+		    $('.container').stop().animate({ scrollTop: distance }, 400, function() {
+		        location.hash = target; 
+		    });
+
+		    return false;
+
+		});
 
 	},
 
@@ -283,9 +323,9 @@ var Nav = {
 		$('.container').scroll(function() {
 			var windowHeight = $(window).height();
 
-			if ($(this).scrollTop() > windowHeight) {
+			if ($(this).scrollTop() > (windowHeight - 20)) {
 				$(".patty").addClass('dark');
-			} else {
+			} else if(!$(".container").hasClass('shifted')){
 				$(".patty").removeClass('dark');
 			}
 		})
@@ -297,7 +337,7 @@ var Nav = {
 		
 		console.log($('.container').scrollTop());
 
-		if ($(".container").scrollTop() > windowHeight) {
+		if ($(".container").scrollTop() > (windowHeight - 20)) {
 			$(".patty").addClass('dark');
 		} else {
 			$(".patty").removeClass('dark');
@@ -312,6 +352,10 @@ var Nav = {
 		$(".video-container").velocity({left: '220px'}, 600, 'easeOutExpo').addClass('shifted');
 		$(".patty").addClass('dark');
 		_.morph('show');
+		$(".container").on('click', function(event) {
+			_.hide();
+			$(this).off(event);
+		});
 	},
 
 	hide : function() {
@@ -335,8 +379,119 @@ var Nav = {
 			$(".patty:last-child").removeClass('tilt-down');
 		}
 
-	}
+	},
 
+	positionTracking : function() {
+
+		var sectionOne = $(".hero");
+		var sectionTwo = $(".paragraphs-background");
+		var sectionThree = $(".footer");
+		var sectionOneStart = sectionOne.position().top;
+		var sectionOneEnd = sectionOneStart + sectionOne.height();
+		var sectionTwoStart = sectionTwo.position().top;
+		var sectionTwoEnd = sectionTwoStart + sectionTwo.height();
+		var sectionThreeStart = sectionThree.position().top;
+		var sectionThreeEnd = sectionThreeStart + sectionThree.height();
+
+		// Retrieve the scope from the angular controller NavController,
+		// it is currently controlling the nav link styles.
+		var element = document.querySelector('[ng-controller=NavController]');
+		var $scope = angular.element(element).scope();
+
+		if (mobile()) {
+			var bottomMargin = $(this).get(0).scrollHeight - $(window).height();
+		}
+
+		$(".container").scroll(function() {
+
+			var scrolled = $(this).scrollTop();
+			var offset = 100;
+			
+			
+			if(scrolled >= (sectionOneStart) && scrolled <= (sectionOneEnd - offset)) {
+
+			    $scope.$apply(function() {
+			        $scope.atHero = true;
+			        $scope.atParagraphs = false;
+			        $scope.atFooter = false;
+			    });
+
+			} else 
+			if (scrolled >= (sectionTwoStart - offset) && scrolled < bottomMargin ) {
+
+				$scope.$apply(function() {
+				    $scope.atHero = false;
+				    $scope.atParagraphs = true;
+				    $scope.atFooter = false;
+				});
+
+			} else
+			if (scrolled >= bottomMargin) {
+
+				$scope.$apply(function() {
+				    $scope.atHero = false;
+				    $scope.atParagraphs = false;
+				    $scope.atFooter = true;
+				});
+
+			}
+
+		});
+
+	}
+}
+
+var InfoNav = {
+	init : function() {
+		//called seperately in info-template view file
+		var _ = this;
+
+		_.listeners($(".info-hamburger"));
+
+	},
+
+	listeners : function(element) {
+		var _ = this;
+
+		element.click(function() {
+
+			if ($(".info-container").hasClass('shifted')) {
+				_.hide();
+			} else {
+				_.show();
+			}
+
+		});
+
+	},
+
+	show : function() {
+		var _ = this;
+
+		$(".info-container").velocity({left: '220px'}, 600, 'easeOutExpo').addClass('shifted');
+		_.morph('show');
+	},
+
+	hide : function() {
+		var _ = this;
+
+		$(".info-container").velocity({left: '0px'}, 600, 'easeOutExpo').removeClass('shifted');
+		_.morph('hide');
+	},
+
+	morph : function(action) {
+
+		if(action == 'show') {
+			$(".patty:first-child").addClass('tilt-up');
+			$(".patty:nth-child(2)").hide();
+			$(".patty:last-child").addClass('tilt-down');
+		} else if(action == 'hide') {
+			$(".patty:first-child").removeClass('tilt-up');
+			$(".patty:nth-child(2)").show();
+			$(".patty:last-child").removeClass('tilt-down');
+		}
+
+	}
 }
 
 var Walkthrough = {
@@ -344,8 +499,14 @@ var Walkthrough = {
 	init : function() {
 		var _ = this;
 
-		_.smartPause();
-		_.parallaxActivate();
+		//_.smartPause();
+		if(!mobile()) {
+			_.parallaxActivate();
+			_.smartPause();	
+		}
+
+		_.twitter();
+		
 	},
 
 	video : document.getElementById('walkthrough-video'),
@@ -391,6 +552,19 @@ var Walkthrough = {
 		
         requestAnimationFrame(Walkthrough.parallax);
 
+	},
+
+	twitter : function() {
+
+		$(".twitter-share-video").hover(function() {
+			$(".twitter-share-video-text").fadeIn('fast');
+			$(".twitter-share-video-overlay").addClass('twitter-share-video-overlay-enlarge');
+
+		}, function() {
+			$(".twitter-share-video-text").fadeOut('fast');
+			$(".twitter-share-video-overlay").removeClass('twitter-share-video-overlay-enlarge');
+		});
+
 	}
 
 }
@@ -401,6 +575,7 @@ var Paragraphs = {
 		var _ = this;
 
 		_.progressIndicator();
+
 	},
 
 	progressIndicator : function() {
@@ -459,8 +634,75 @@ var Twitter = {
 
 }
 
+/**
+ * iOS overflow scrollToTop v0.1
+ * https://github.com/prud/ios-overflow-scroll-to-top
+ */
+
+ var ScrollTop = {
+
+ 	init : function() {
+ 		var _ = this;
+
+ 		_.visible();
+ 	},
+
+ 	visible : function() {
+
+ 		$(".container").scroll(function() {
+
+ 			if($(this).scrollTop() > $(window).height()) {
+
+ 				$(".back-to-top").fadeIn();
+
+ 			} else {
+
+ 				$(".back-to-top").fadeOut();
+ 			}
+
+ 		});
+
+ 	}
+
+ }
+
+ var headerEl = document.querySelector('.back-to-top');
+
+var scrollToTop = function(el) {
+
+  el = typeof el === 'object' ? el : document.querySelector(el);
+  if (!el) { return; }
+
+  var offset = el.scrollTop;
+  if (offset === 0) { return; }
+
+  el.style.overflow = 'hidden'; // stops momentum scrolling
+  var stepSize = offset / (offset < 1000 ?  15 : 30);
+
+  var _animate = function() {
+
+    el.scrollTop -= stepSize;
+
+    if (el.scrollTop > 0) { // keep scrolling up
+      setTimeout(_animate, 10);
+    }
+    else { // enough
+      _onFinish();
+    }
+  };
+
+  var _onFinish = function() {
+    el.scrollTop = 0;
+    el.style.overflow = null;
+  };
+
+  _animate();
+};
 
 
+headerEl.addEventListener('click', function() {
+  window.scrollToTop('.container');
+});
 
 
 $(document).ready(function() {
@@ -472,6 +714,12 @@ $(document).ready(function() {
 	Walkthrough.init();
 	Paragraphs.init();
 	Twitter.init();
+
+	if(mobile()) {
+		ScrollTop.init();
+	}
+	
+
 
     
 });
