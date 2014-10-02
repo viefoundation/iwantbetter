@@ -1020,10 +1020,8 @@ $(document).ready(function() {
 	Paragraphs.init();
 	Twitter.init();
 	Footer.init();
-
-	if(mobile()) {
-		ScrollTop.init();
-	}
+	ScrollTop.init();
+	
 	
 
 
