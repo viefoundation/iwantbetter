@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'iwantbetter',
-			'username'  => 'root',
-			'password'  => 'root',
+			'database'  => 'kinglyco_iwantbetter',
+			'username'  => 'kinglyco',
+			'password'  => '[Kingandwife1]',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
