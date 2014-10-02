@@ -899,7 +899,10 @@ var Footer = {
 
 		if(!mobile()) {
 
-			requestAnimationFrame(Footer.slideUp);
+			setTimeout(function(){
+				requestAnimationFrame(Footer.slideUp);
+			}, 500);
+			
 
 		}
 
@@ -909,7 +912,7 @@ var Footer = {
 	containerHeight : $(".container").get(0).scrollHeight,
 
 	slideUp : function() {
-
+		console.log('called');
 		var scrolled = $(".container").scrollTop();
 		var activatePoint = Footer.containerHeight - (Footer.footerHeight * 2) - $(window).height();
 

@@ -44,7 +44,7 @@
             <ul>
                 <li><a href="#hero" ng-class="{viewing: atHero}">Gallery Video</a></li>               
                 <li><a href="#paragraphs-background" ng-class="{viewing: atParagraphs}">Read More</a></li>
-                <li><a href="#footer" ng-class="{viewing: atFooter}">For You</a></li>
+                <li><a href="#footer-container" ng-class="{viewing: atFooter}">For You</a></li>
             </ul>
         </nav>
 
@@ -94,7 +94,7 @@
             
             <div class="paragraphs-section-progress"><span id="percentage">0</span>%</div>
 
-            
+
             
             <div class="footer-container">
 
@@ -135,7 +135,7 @@
 
                     <div class="footer-links">
                         <p><span class="bold"><a target="_blank" href=" {{ url('give') }} ">$</a></span> <span class="faded">|</span> <a href="mailto:ilike@iwantbetter.org">ILIKE@IWANTBETTER.ORG</a> <span class="faded">|</span> <a target="_blank" href="{{ url('style') }}">STYLE GUIDE</a> <span class="faded">|</span> <a target="_blank" href="{{ url('partners') }}">CORPORATE PARTNERSHIP</a> <span class="faded">|</span> <a target="_blank" href="{{ url('privacy') }}">PRIVACY POLICY</a> <span class="faded">|</span> <a target="_blank" href="{{ url('press') }}">PRESS RELEASE</a> <span class="faded">|</span> VIE - <span class="faded">501(c)(3)NON PROFIT ORG.</span></p>
-                        <p>Public Domain 2014 - Free to Use by All.</p>
+                        <p><span class="bold">Public Domain 2014</span> - Free to Use by All.</p>
                     </div>
 
                 </div>
