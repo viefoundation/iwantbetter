@@ -2,16 +2,16 @@
     
     <h2>I Want Better is that "easier" enablement. It's a new way to deal with the abortion topic.</h2>
 
-    <p><span class="bold">Instead of one side or the other, I Want Better enables you to stand foe what you believe
+    <p><span class="bold">Instead of one side or the other, I Want Better enables you to stand for what you believe
             in, even next to others whose beliefs are not exact to yours.</span> {{ HTML::twitter(null, 'Nobody really likes abortion, to be for something better should be a lot easier than it is. I Want Better makes it easier. #goodforall', '#goodforall', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
     </p>
 
-    <p>These three words (I Want Better) take a difficult topic usually navigated bt people groups - 
+    <p>These three words (I Want Better) take a difficult topic usually navigated by people groups - 
         religion, race, politics, etc. - to a stripped down individialized version. The realization that only I can give
-        myseld better is hugely needed in the current rut of thinkng. No government, no church and no law can give me betterl or 
+        myself better is hugely needed in the current rut of thinking. No government, no church and no law can give me better or 
         anyone else ultimately. In the formation of sides we are spending our time and efforts working against each other.
         The information here works to erase sides and introduce the enablement of individual application with the hopeful idea
-        that it becomes contagious
+        that it becomes contagious.
     </p>
 
     <p>The statement I Want Better is meant to be the residual response to the question “What is 
