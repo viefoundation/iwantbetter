@@ -748,12 +748,22 @@ nav {
 }
 
 
+.footer-container {
+	width:100%;
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	background-color: white;
+}
+
+
 .footer {
 	position: relative;
 
 	width:100%;
 	height:500px;
 	background-color: $gray; 
+	@include transform(translateY(500px));
 	
 	.tagline {
 
@@ -819,6 +829,7 @@ nav {
 	@include breakpoint(1000px) {
 		height:auto;
 		overflow: auto;
+		@include transform(translateY(0px));
 	}
 
 }

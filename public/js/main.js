@@ -634,6 +634,50 @@ var Twitter = {
 
 }
 
+var Footer = {
+
+	init : function() {
+		var _ = this;
+
+		if(!mobile()) {
+
+			requestAnimationFrame(Footer.slideUp);
+	
+		}
+
+	},
+	footer : $(".footer"),
+	footerHeight : $(".footer").height(),
+	containerHeight : $(".container").get(0).scrollHeight,
+
+	slideUp : function() {
+
+		var scrolled = $(".container").scrollTop();
+		var activatePoint = Footer.containerHeight - (Footer.footerHeight * 2) - $(window).height();
+
+		if (scrolled > activatePoint) {
+
+			var distance = scrolled - (Footer.containerHeight - (Footer.containerHeight - activatePoint));
+
+			var moveBy = 500 - (distance * 0.5);
+
+			if (moveBy > 0) {
+
+			}
+
+			Footer.footer.css('transform', 'translateY(' + moveBy + 'px)');
+
+		}
+
+		requestAnimationFrame(Footer.slideUp);
+
+		// console.log(scrolled + " : " + activatePoint);
+
+	}
+
+}
+
+
 /**
  * iOS overflow scrollToTop v0.1
  * https://github.com/prud/ios-overflow-scroll-to-top
@@ -714,6 +758,7 @@ $(document).ready(function() {
 	Walkthrough.init();
 	Paragraphs.init();
 	Twitter.init();
+	Footer.init();
 
 	if(mobile()) {
 		ScrollTop.init();

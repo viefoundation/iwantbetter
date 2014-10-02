@@ -93,48 +93,55 @@
             </div>
             
             <div class="paragraphs-section-progress"><span id="percentage">0</span>%</div>
+
             
-            <div class="footer" id="footer">
+            
+            <div class="footer-container">
 
-                <div class="form-container" ng-controller="FormController">
+                <div class="footer" id="footer">
 
-                    <p class="tagline">Like what you see, Want a sticker?</p>
+                    <div class="form-container" ng-controller="FormController">
 
-                    <form ng-submit="submit()">
-                        <p><input class="inputs" type="text" name="full_name" placeholder="Full Name" ng-model="submission.fullName"></p>
-                        <p><input class="inputs" type="text" name="address" placeholder="Shipping Address" ng-model="submission.address"></p>
-                        <p><input class="inputs" type="text" name="address_2" placeholder="City St. Zip Country" ng-model="submission.address2"></p>
-                        <p class="submit-line"><input class="email-input" type="text" name="email" placeholder="Email Address" ng-model="submission.email">
-                        <button type="submit">Yes, <span>Please!</span><div class="slanted-line"></div></button></p>
-                    </form>
+                        <p class="tagline">Like what you see, Want a sticker?</p>
 
-                    <div class="success-overlay" ng-show="successPrompt">
+                        <form ng-submit="submit()">
+                            <p><input class="inputs" type="text" name="full_name" placeholder="Full Name" ng-model="submission.fullName"></p>
+                            <p><input class="inputs" type="text" name="address" placeholder="Shipping Address" ng-model="submission.address"></p>
+                            <p><input class="inputs" type="text" name="address_2" placeholder="City St. Zip Country" ng-model="submission.address2"></p>
+                            <p class="submit-line"><input class="email-input" type="text" name="email" placeholder="Email Address" ng-model="submission.email">
+                            <button type="submit">Yes, <span>Please!</span><div class="slanted-line"></div></button></p>
+                        </form>
 
-                        <div class="center">
-                            <p class="heading">Sticker Request Successfully Sent!</p>
+                        <div class="success-overlay" ng-show="successPrompt">
 
-                            <p class="sub-heading">Would You like to hear from<br> I Want Better in the future?</p>
+                            <div class="center">
+                                <p class="heading">Sticker Request Successfully Sent!</p>
 
-                            <p class="choices"><span ng-click="subscribe()">YES</span> / <span ng-click="hideOverlay()">NO</span></p>
+                                <p class="sub-heading">Would You like to hear from<br> I Want Better in the future?</p>
+
+                                <p class="choices"><span ng-click="subscribe()">YES</span> / <span ng-click="hideOverlay()">NO</span></p>
+                            </div>
+
                         </div>
 
                     </div>
 
-                </div>
+                    <div class="call-to-action">
+                        <p class="letter-tape">&nbsp;&nbsp;<span class="regular">Be Inspired.</span>&nbsp;</p><br>
+                        <p class="letter-tape">&nbsp;&nbsp;Use Information.&nbsp;</p><br>
+                        <p class="letter-tape">&nbsp;&nbsp;Inspire Others.&nbsp;</p>
+                        <p><a href="mailto:ilike@iwantbetter.org"></a>www.iwantbetter.org</p>
+                    </div>
 
-                <div class="call-to-action">
-                    <p class="letter-tape">&nbsp;&nbsp;<span class="regular">Be Inspired.</span>&nbsp;</p><br>
-                    <p class="letter-tape">&nbsp;&nbsp;Use Information.&nbsp;</p><br>
-                    <p class="letter-tape">&nbsp;&nbsp;Inspire Others.&nbsp;</p>
-                    <p><a href="mailto:ilike@iwantbetter.org"></a>www.iwantbetter.org</p>
-                </div>
+                    <div class="footer-links">
+                        <p><span class="bold"><a target="_blank" href=" {{ url('give') }} ">$</a></span> <span class="faded">|</span> <a href="mailto:ilike@iwantbetter.org">ILIKE@IWANTBETTER.ORG</a> <span class="faded">|</span> <a target="_blank" href="{{ url('style') }}">STYLE GUIDE</a> <span class="faded">|</span> <a target="_blank" href="{{ url('partners') }}">CORPORATE PARTNERSHIP</a> <span class="faded">|</span> <a target="_blank" href="{{ url('privacy') }}">PRIVACY POLICY</a> <span class="faded">|</span> <a target="_blank" href="{{ url('press') }}">PRESS RELEASE</a> <span class="faded">|</span> VIE - <span class="faded">501(c)(3)NON PROFIT ORG.</span></p>
+                        <p>Public Domain 2014 - Free to Use by All.</p>
+                    </div>
 
-                <div class="footer-links">
-                    <p><span class="bold"><a target="_blank" href=" {{ url('give') }} ">$</a></span> <span class="faded">|</span> <a href="mailto:ilike@iwantbetter.org">ILIKE@IWANTBETTER.ORG</a> <span class="faded">|</span> <a target="_blank" href="{{ url('style') }}">STYLE GUIDE</a> <span class="faded">|</span> <a target="_blank" href="{{ url('partners') }}">CORPORATE PARTNERSHIP</a> <span class="faded">|</span> <a target="_blank" href="{{ url('privacy') }}">PRIVACY POLICY</a> <span class="faded">|</span> <a target="_blank" href="{{ url('press') }}">PRESS RELEASE</a> <span class="faded">|</span> VIE - <span class="faded">501(c)(3)NON PROFIT ORG.</span></p>
-                    <p>Public Domain 2014 - Free to Use by All.</p>
                 </div>
 
             </div>
+            
 
            
 
