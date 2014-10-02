@@ -998,7 +998,7 @@ var scrollToTop = function(el) {
 
   var _onFinish = function() {
     el.scrollTop = 0;
-    el.style.overflow = null;
+    
   };
 
   _animate();
