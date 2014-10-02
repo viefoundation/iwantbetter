@@ -981,7 +981,7 @@ var scrollToTop = function(el) {
   var offset = el.scrollTop;
   if (offset === 0) { return; }
 
-  el.style.overflow = 'hidden'; // stops momentum scrolling
+  //el.style.overflow = 'hidden'; // stops momentum scrolling
   var stepSize = offset / (offset < 1000 ?  15 : 30);
 
   var _animate = function() {
@@ -997,7 +997,7 @@ var scrollToTop = function(el) {
   };
 
   var _onFinish = function() {
-    el.scrollTop = 0;
+   // el.style.overflow = 'scroll'; 
     
   };
 
