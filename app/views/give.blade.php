@@ -4,7 +4,7 @@
 
 <div class="giving-container">
 	<div class="column-left">
-		<h2> You must really want to give if you have found this section!</h2>
+		<h2> You must really want to give if you found this section!</h2>
 		<p>I Want Better subtly tucked this section away to try and keep from distracting the user, it’s only for the avid anyway.</p>	
 		<p>Thank you for wanting to help. Here you can sign up for monthly giving or tap the link for one time donation options through PayPal -</p>
 		<p>You can adjust or cancel your monthly giving at anytime. Email any of your needs to - </p>
