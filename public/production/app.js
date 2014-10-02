@@ -535,16 +535,21 @@ var Nav = {
 	},
 
 	smoothScroll : function() {
+		var _ = this;
 
 		$('a[href*=#]').bind('click', function() {
-		     
+		    
+			_.hide();
+
 		    var target = $(this).attr("href");
 
 		    var distance = $(target).offset().top - $(target).parent().offset().top + $(target).parent().scrollTop();
-		    		
+		    	
 		    $('.container').stop().animate({ scrollTop: distance }, 400, function() {
 		        location.hash = target; 
 		    });
+
+
 
 		    return false;
 

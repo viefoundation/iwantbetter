@@ -96,7 +96,7 @@
 
 
             
-            <div class="footer-container">
+            <div class="footer-container" id="footer-container">
 
                 <div class="footer" id="footer">
 
