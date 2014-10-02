@@ -754,6 +754,11 @@ nav {
 	position: relative;
 	overflow: hidden;
 	background-color: white;
+
+	@include breakpoint(1000px) {
+		overflow: auto;
+		height:auto;	
+	}
 }
 
 

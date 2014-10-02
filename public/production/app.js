@@ -626,11 +626,15 @@ var Nav = {
 
 	},
 
+	
+
 	positionTracking : function() {
+		
+		var _ = this;
 
 		var sectionOne = $(".hero");
 		var sectionTwo = $(".paragraphs-background");
-		var sectionThree = $(".footer");
+		var sectionThree = $(".footer-container");
 		var sectionOneStart = sectionOne.position().top;
 		var sectionOneEnd = sectionOneStart + sectionOne.height();
 		var sectionTwoStart = sectionTwo.position().top;
@@ -644,44 +648,53 @@ var Nav = {
 		var $scope = angular.element(element).scope();
 
 		if (mobile()) {
-			var bottomMargin = $(this).get(0).scrollHeight - $(window).height();
+			var bottomMargin = sectionThreeStart;
+		} else {
+			var bottomMargin = $('.container').get(0).scrollHeight - $(window).height();
 		}
+
+		_.scrollPosition($('.container'),bottomMargin, $scope, sectionOneStart, sectionOneEnd, sectionTwoStart);
 
 		$(".container").scroll(function() {
 
-			var scrolled = $(this).scrollTop();
-			var offset = 100;
-			
-			
-			if(scrolled >= (sectionOneStart) && scrolled <= (sectionOneEnd - offset)) {
-
-			    $scope.$apply(function() {
-			        $scope.atHero = true;
-			        $scope.atParagraphs = false;
-			        $scope.atFooter = false;
-			    });
-
-			} else 
-			if (scrolled >= (sectionTwoStart - offset) && scrolled < bottomMargin ) {
-
-				$scope.$apply(function() {
-				    $scope.atHero = false;
-				    $scope.atParagraphs = true;
-				    $scope.atFooter = false;
-				});
-
-			} else
-			if (scrolled >= bottomMargin) {
-
-				$scope.$apply(function() {
-				    $scope.atHero = false;
-				    $scope.atParagraphs = false;
-				    $scope.atFooter = true;
-				});
-
-			}
+			_.scrollPosition($(this),bottomMargin, $scope, sectionOneStart, sectionOneEnd, sectionTwoStart);
 
 		});
+
+	},
+
+	scrollPosition : function($container, bottomMargin, $scope, sectionOneStart, sectionOneEnd, sectionTwoStart) {
+
+		var scrolled = $container.scrollTop();
+		var offset = 100;
+		
+		if(scrolled >= (sectionOneStart) && scrolled <= (sectionOneEnd - offset)) {
+
+		    $scope.$apply(function() {
+		        $scope.atHero = true;
+		        $scope.atParagraphs = false;
+		        $scope.atFooter = false;
+		    });
+
+		} else 
+		if (scrolled >= (sectionTwoStart - offset) && scrolled < bottomMargin ) {
+
+			$scope.$apply(function() {
+			    $scope.atHero = false;
+			    $scope.atParagraphs = true;
+			    $scope.atFooter = false;
+			});
+
+		} else
+		if (scrolled >= bottomMargin) {
+
+			$scope.$apply(function() {
+			    $scope.atHero = false;
+			    $scope.atParagraphs = false;
+			    $scope.atFooter = true;
+			});
+
+		}
 
 	}
 }
@@ -887,7 +900,7 @@ var Footer = {
 		if(!mobile()) {
 
 			requestAnimationFrame(Footer.slideUp);
-	
+
 		}
 
 	},
