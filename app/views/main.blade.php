@@ -187,7 +187,7 @@
 
                     }).error(function(data) {
 
-                        console.log("something went wrong : " + data.error);
+                        console.log(data.error);
 
                     });
 
@@ -217,7 +217,7 @@
 
                     }).error(function(data) {
 
-                        console.log("something went wrong");
+                        console.log(data.error);
 
                     });
 
