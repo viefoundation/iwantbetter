@@ -47,7 +47,7 @@
             ];
 
             Request::is('give/*') || Request::path() == 'give' ? $header = "$" : '';
-            Request::path() == 'style' ? $header = 'Style' : '';
+            Request::path() == 'style' ? $header = 'Style Guide' : '';
             Request::path() == 'partners' ? $header = 'Partners' : '';
             Request::path() == 'privacy' ? $header = 'Privacy' : '';
             Request::path() == 'press' ? $header = 'Press' : '';
