@@ -672,7 +672,7 @@ var Footer = {
 	containerHeight : $(".container").get(0).scrollHeight,
 
 	slideUp : function() {
-		console.log('called');
+
 		var scrolled = $(".container").scrollTop();
 		var activatePoint = Footer.containerHeight - (Footer.footerHeight * 2) - $(window).height();
 
@@ -691,8 +691,6 @@ var Footer = {
 		}
 
 		requestAnimationFrame(Footer.slideUp);
-
-		// console.log(scrolled + " : " + activatePoint);
 
 	}
 
