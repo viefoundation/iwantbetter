@@ -96,11 +96,23 @@
 
 
             
-            <div class="footer-container" id="footer-container">
+            <div class="footer-container" id="footer-container" ng-controller="FormController">
+
+                <div class="success-overlay" ng-show="successPrompt">
+
+                    <div class="center">
+                        <p class="heading">Sticker Request Successfully Sent!</p>
+
+                        <p class="sub-heading">Would You like to hear from<br> I Want Better in the future?</p>
+
+                        <p class="choices"><span ng-click="subscribe()">YES</span> / <span ng-click="hideOverlay()">NO</span></p>
+                    </div>
+
+                </div>
 
                 <div class="footer" id="footer">
 
-                    <div class="form-container" ng-controller="FormController">
+                    <div class="form-container" >
 
                         <p class="tagline">Like what you see, Want a sticker?</p>
 
@@ -112,17 +124,7 @@
                             <button type="submit">Yes, <span>Please!</span><div class="slanted-line"></div></button></p>
                         </form>
 
-                        <div class="success-overlay" ng-show="successPrompt">
-
-                            <div class="center">
-                                <p class="heading">Sticker Request Successfully Sent!</p>
-
-                                <p class="sub-heading">Would You like to hear from<br> I Want Better in the future?</p>
-
-                                <p class="choices"><span ng-click="subscribe()">YES</span> / <span ng-click="hideOverlay()">NO</span></p>
-                            </div>
-
-                        </div>
+                       
 
                     </div>
 

@@ -19,10 +19,16 @@ class FormController extends BaseController {
 			$order->email = $email;
 			$order->save();
 
+
+			Mail::send('emails.newOrder', [], function($message)
+			{
+			    $message->to('austenpayan@gmail.com', 'Austen Payan')->subject('New Sticker Order!');
+			});
+
 		} catch (Exception $e) {
 
 			return Response::json([
-				'error' => $e
+				'error' => App::environment()
 			], 404);
 
 		}
