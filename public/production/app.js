@@ -630,6 +630,7 @@ var Nav = {
 }
 
 var InfoNav = {
+	
 	init : function() {
 		//called seperately in info-template view file
 		var _ = this;
