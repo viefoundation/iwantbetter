@@ -158,6 +158,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="{{ asset('js/vendor/angular.min.js') }}"></script>
         <script src="{{ asset('js/vendor/velocity.min.js') }}"></script>
+        <script src="{{ asset('js/vendor/nanobar.min.js') }}"></script>
         <script src="{{ asset('js/plugins.js') }}"></script>
         <script>
 
@@ -169,6 +170,12 @@
                 $scope.successPrompt = false;
 
                 $scope.submit = function() {
+
+                    var nanobar = new Nanobar({
+                        bg : '#F9E400'
+                    });
+
+                    nanobar.go(45);
 
                     var newStickerRequest = {
 
@@ -188,6 +195,8 @@
 
                     }).success(function() {
 
+                        nanobar.go(70);
+                        nanobar.go(100);
                         $scope.successPrompt = true;
 
                     }).error(function(data) {
