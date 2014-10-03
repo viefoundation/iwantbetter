@@ -41,7 +41,7 @@ return array(
 	|
 	*/
 
-	'port' => 465,
+	'port' => 26,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'ilike@iwantbetter', 'name' => 'I Want Better Campaign'),
+	'from' => array('address' => 'ilike@iwantbetter.org', 'name' => 'I Want Better Campaign'),
 
 	/*
 	|--------------------------------------------------------------------------
