@@ -768,6 +768,10 @@ nav {
 		width:300px;
 		display: block;
 		margin:0px auto 15px auto;
+
+		@include breakpoint(1000px) {
+			width:200px;
+		}
 	}
 
 	.image-description {
@@ -779,6 +783,10 @@ nav {
 		color:gray;
 		font-size: 1.1rem;
 		font-weight: normal;
+
+		@include breakpoint(1000px) {
+			margin-bottom: 20px;
+		}
 	}
 
 
@@ -812,7 +820,7 @@ nav {
 
 		@include breakpoint(1000px) {
 			float:none;
-			margin: 50px 30px;
+			margin: 50px 40px;
 		}
 
 	}
@@ -857,6 +865,7 @@ nav {
 	}
 
 	@include breakpoint(1000px) {
+		position: relative;
 		height:auto;
 		overflow: auto;
 		@include transform(translateY(0px));
@@ -960,6 +969,7 @@ form {
 	}
 
 	@include breakpoint(1000px) {
+		width:100%;
 		font-size: 1.5rem;
 		margin-bottom: 20px;
 		border-radius: 0;
