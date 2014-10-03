@@ -30,7 +30,7 @@ class FormController extends BaseController {
 
 		Mail::queue('emails.newOrder', ['name' => $full_name, 'address1' => $address, 'address2' => $address2, 'email' => $email], function($message) {
 		    
-		    $message->to('austenpayan@gmail.com', 'Austen Payan')->subject('New Sticker Order!');
+		    $message->to('emailme@troyhollinger.com', 'Troy Hollinger')->cc('austenpayan@gmail.com')->subject('New Sticker Order!');
 
 		});
 
