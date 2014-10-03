@@ -1117,6 +1117,11 @@ button {
 
 		a {
 			color:#979A9D;
+
+			&:hover {
+				font-weight: bold;
+			}
+
 		}
 	}
 
