@@ -110,6 +110,9 @@
 
                 </div>
 
+                <img src="img/iwb-logo.svg">
+                <span class="image-description">- <span class="bold">A new campaign</span> privately developed for public use -</span>
+
                 <div class="footer" id="footer">
 
                     <div class="form-container" >

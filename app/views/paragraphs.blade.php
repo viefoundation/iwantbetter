@@ -193,9 +193,6 @@
         have real control of, myself. </h2>
 
 
-    <img src="img/iwb-logo.svg">
-    <span class="image-description">- <span class="bold">A new campaign</span> privately developed for public use -</span>
-
 </div>
 
 

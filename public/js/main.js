@@ -385,7 +385,7 @@ var Nav = {
 }
 
 var InfoNav = {
-	
+
 	init : function() {
 		//called seperately in info-template view file
 		var _ = this;
@@ -600,13 +600,15 @@ var Footer = {
 	slideUp : function() {
 		var containerHeight = $(".container").get(0).scrollHeight;
 		var scrolled = $(".container").scrollTop();
-		var activatePoint = containerHeight - (Footer.footerHeight * 2) - $(window).height();
+		var activatePoint = containerHeight - (Footer.footerHeight / 4) - $(window).height();
+
+
 
 		if (scrolled > activatePoint) {
 
 			var distance = scrolled - (containerHeight - (containerHeight - activatePoint));
 
-			var moveBy = 500 - (distance * 0.5);
+			var moveBy = 500 - (distance * 4);
 
 			if (moveBy > 0) {
 
@@ -616,11 +618,19 @@ var Footer = {
 
 		}
 
+		if (scrolled < activatePoint) {
+
+			Footer.footer.css('transform', 'translateY(500px)');
+
+		}
+
 		requestAnimationFrame(Footer.slideUp);
 
 	}
 
 }
+
+
 
 
 /**

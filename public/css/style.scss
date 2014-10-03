@@ -763,16 +763,36 @@ nav {
 		overflow: auto;
 		height:auto;	
 	}
+
+	img {
+		width:300px;
+		display: block;
+		margin:0px auto 15px auto;
+	}
+
+	.image-description {
+		display: block;
+		margin:0 auto;
+		text-transform: uppercase;
+		text-align: center;
+		font-family: $opensans;
+		color:gray;
+		font-size: 1.1rem;
+		font-weight: normal;
+	}
+
+
 }
 
 
 .footer {
-	position: relative;
-
+	position: fixed;
 	width:100%;
 	height:500px;
 	background-color: $gray; 
+	bottom: 0;
 	@include transform(translateY(500px));
+	z-index:-9;
 	
 	.tagline {
 
