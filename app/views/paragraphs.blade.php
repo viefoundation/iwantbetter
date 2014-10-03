@@ -89,9 +89,9 @@
         public service announcements help. {{ HTML::twitter(null, 'Medicine is better. Adoption is better. Choice is better. People are better. #abortion #iwantbetter ', '#abortion', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
     </p>
 
-    <h2>Prolife vs Prochoice* should not be the 
+    <h2>Prolife vs Prochoice should not be the 
     only way for us to deal w/the abortion 
-    topic. *and vice versa</h2>
+    topic.</h2>
 
     <p>They’re simply not engineered for the vast majority of public use. We need something that it 
         is. I Want Better aims to be that. Even though 7 billion humans pursuing what they each 
@@ -99,11 +99,6 @@
         our efforts to this cause. The purposeful subjectivity and abstractness of this campaign is 
         meant to bring a paradigm shift that allows all of us, as differing as we may be, to be part of a 
         bigger whole without disabling logistics. {{ HTML::twitter(null, 'Prochoice vs Prolife should not be the only way for us to deal with the #abortion topic so #iwantbetter was made.', '#7Billion', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
-    </p>
-
-    <p>Again, the asterisk is there to convey that this blurb is not meant to pick on either of those 
-        campaigns in particular. Please do not take these critiques personally. See them for what 
-        they are meant to be - liberation.
     </p>
 
     <h2>A Common Goal - <span class="bold">LET’S SOLVE OUR 
