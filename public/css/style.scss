@@ -792,7 +792,8 @@ nav {
 	background-color: $gray; 
 	bottom: 0;
 	@include transform(translateY(500px));
-	z-index:-9;
+	// z-index:-9;
+	pointer-events:none;
 	
 	.tagline {
 
