@@ -5,7 +5,7 @@ class FormController extends BaseController {
 
 	public function submit() {
 
-		$fullName = Input::get('fullName');
+		$full_name = Input::get('fullName');
 		$address = Input::get('address');
 		$address2 = Input::get('address2');
 		$email = Input::get('email');
@@ -28,7 +28,7 @@ class FormController extends BaseController {
 		}
 
 
-		Mail::queue('emails.newOrder', ['name' => $fullName, 'address1' => $address, 'address2' => $address2, 'email' => $email], function($message) {
+		Mail::queue('emails.newOrder', ['name' => $full_name, 'address1' => $address, 'address2' => $address2, 'email' => $email], function($message) {
 		    
 		    $message->to('austenpayan@gmail.com', 'Austen Payan')->subject('New Sticker Order!');
 
