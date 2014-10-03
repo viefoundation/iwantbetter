@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'ilike@iwantbetter.org', 'name' => 'I Want Better Campaign'),
+	'from' => array('address' => 'ilike@iwantbetter.org', 'name' => 'I Want Better'),
 
 	/*
 	|--------------------------------------------------------------------------

@@ -120,10 +120,10 @@
                         <p class="tagline">Like what you see, Want a sticker?</p>
 
                         <form ng-submit="submit()">
-                            <p><input class="inputs" type="text" name="full_name" placeholder="Full Name" ng-model="submission.fullName"></p>
-                            <p><input class="inputs" type="text" name="address" placeholder="Shipping Address" ng-model="submission.address"></p>
-                            <p><input class="inputs" type="text" name="address_2" placeholder="City St. Zip Country" ng-model="submission.address2"></p>
-                            <p class="submit-line"><input class="email-input" type="text" name="email" placeholder="Email Address" ng-model="submission.email">
+                            <p><input class="inputs" type="text" name="full_name" placeholder="Full Name" ng-model="submission.fullName" required></p>
+                            <p><input class="inputs" type="text" name="address" placeholder="Shipping Address" ng-model="submission.address" required></p>
+                            <p><input class="inputs" type="text" name="address_2" placeholder="City St. Zip Country" ng-model="submission.address2" required></p>
+                            <p class="submit-line"><input class="email-input" type="text" name="email" placeholder="Email Address" ng-model="submission.email" required>
                             <button type="submit">Yes, <span>Please!</span><div class="slanted-line"></div></button></p>
                         </form>
 
