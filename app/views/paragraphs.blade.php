@@ -7,7 +7,7 @@
     </p>
 
     <p>These three words (I Want Better) take a difficult topic usually navigated by people groups - 
-        religion, race, politics, etc. - to a stripped down individialized version. The realization that only I can give
+        religion, race, politics, etc. - to a stripped down individualized version. The realization that only I can give
         myself better is hugely needed in the current rut of thinking. No government, no church and no law can give me better or 
         anyone else ultimately. In the formation of sides we are spending our time and efforts working against each other.
         The information here works to erase sides and introduce the enablement of individual application with the hopeful idea
