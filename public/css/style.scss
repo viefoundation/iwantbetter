@@ -914,6 +914,12 @@ form {
 		margin-top: 10px;
 	}
 
+	&:focus {
+		@include placeholder {
+			color:gray;
+		}
+	}
+
 }
 
 .email-input {
@@ -939,6 +945,12 @@ form {
 		margin-top: 10px;
 		border-bottom: solid 1px black;
 
+	}
+
+	&:focus {
+		@include placeholder {
+			color:gray;
+		}
 	}
 
 }
