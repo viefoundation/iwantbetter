@@ -594,16 +594,16 @@ var Footer = {
 	},
 	footer : $(".footer"),
 	footerHeight : $(".footer").height(),
-	containerHeight : $(".container").get(0).scrollHeight,
+	
 
 	slideUp : function() {
-
+		var containerHeight = $(".container").get(0).scrollHeight;
 		var scrolled = $(".container").scrollTop();
-		var activatePoint = Footer.containerHeight - (Footer.footerHeight * 2) - $(window).height();
+		var activatePoint = containerHeight - (Footer.footerHeight * 2) - $(window).height();
 
 		if (scrolled > activatePoint) {
 
-			var distance = scrolled - (Footer.containerHeight - (Footer.containerHeight - activatePoint));
+			var distance = scrolled - (containerHeight - (containerHeight - activatePoint));
 
 			var moveBy = 500 - (distance * 0.5);
 
