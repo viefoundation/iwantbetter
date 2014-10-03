@@ -54,7 +54,9 @@
         </div>
 
         <div class="video-container">
-            <video id="walkthrough-video" src="{{ asset('img/walkthrough.mp4') }}" autoplay loop muted>
+            <video id="walkthrough-video" autoplay loop muted>
+                <source src="{{ asset('img/walkthrough.mp4') }}" type="video/mp4">
+                <source src="{{ asset('img/walkthrough.ogv') }}" type="video/ogg">
                 Your browser does not support this video. Please upgrade to a modern browser.
             </video>
             

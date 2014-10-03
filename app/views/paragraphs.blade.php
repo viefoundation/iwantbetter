@@ -36,7 +36,7 @@
         ploy, hate &amp; animosity will not give it to us. {{ HTML::twitter(null, 'Inspiring & enabling change will lead us to better - Legislation, policy, guilt, emotional ploy, hate & animosity will not. #inspirechange', '#inspirechange', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
     </p>
 
-    <p>Below you will find an expanded commentary to the video playing above. Throughout you 
+    <p class="faded">Below you will find an expanded commentary to the video playing above. Throughout you 
         will see #hashtags that will enable you to easily lift content and take it with you. Enjoy.
     </p>
 
@@ -192,6 +192,8 @@
     <h2>I Want Better - mainly because that is all I 
         have real control of, myself. </h2>
 
+
+   
 
 </div>
 

@@ -703,7 +703,13 @@ nav {
 
 	img {
 		width:40px;
+
+		@include breakpoint(1000px) {
+			width:32px;
+		}
 	}
+
+
 }
 
 .twitter-share-video-text {
@@ -1068,6 +1074,7 @@ button {
 	width:100%;
 	padding:0 60px;
 	@include box-sizing(border-box);
+	pointer-events:auto;
 
 	p:first-child {
 		float:left;
