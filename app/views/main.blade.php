@@ -29,6 +29,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <script src="{{ asset('js/vendor/modernizr-2.6.2.min.js') }}"></script>
+        <script src="{{ asset('js/vendor/angular.min.js') }}"></script>
     </head>
     <body ng-app="iwantbetter">
 
@@ -103,7 +104,7 @@
             
             <div class="footer-container" id="footer-container" ng-controller="FormController">
 
-                <div class="success-overlay" ng-show="successPrompt">
+                <div class="success-overlay" ng-show="successPrompt" ng-cloak>
 
                     <div class="center">
                         <p class="heading">Sticker Request Successfully Sent!</p>
@@ -161,7 +162,7 @@
         
  
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="{{ asset('js/vendor/angular.min.js') }}"></script>
+        
         <script src="{{ asset('js/vendor/velocity.min.js') }}"></script>
         <script src="{{ asset('js/vendor/nanobar.min.js') }}"></script>
         <script src="{{ asset('js/plugins.js') }}"></script>

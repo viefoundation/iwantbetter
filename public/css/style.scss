@@ -794,6 +794,8 @@ nav {
 
 		@include breakpoint(1000px) {
 			margin-bottom: 20px;
+			font-size: 1rem;
+			width:85%;
 		}
 	}
 
@@ -1109,6 +1111,10 @@ button {
 
 	p:last-child {
 		float:right;
+
+		@include breakpoint(1000px) {
+			float:left;
+		}
 	}
 
 	@include breakpoint(1000px) {
