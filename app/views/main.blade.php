@@ -97,6 +97,9 @@
             <div class="paragraphs-section-progress"><span id="percentage">0</span>%</div>
 
 
+
+            
+
             
             <div class="footer-container" id="footer-container" ng-controller="FormController">
 

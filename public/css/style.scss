@@ -102,6 +102,7 @@ $green : #24A349;
 
 .center {
 	@include center;
+
 }
 
 .faded {
@@ -767,7 +768,8 @@ nav {
 
 	@include breakpoint(1000px) {
 		overflow: auto;
-		height:auto;	
+		height:auto;
+		position: static;	
 	}
 
 	img {
@@ -895,24 +897,40 @@ nav {
 	div {
 		width:30%;
 		top:45%;
+
+		@include breakpoint(1000px) {
+			width:80%;
+		}
 	}
 
 	.heading {
 		text-align: center;
 		font-size: 4rem;
 		font-weight: 300;
+
+		@include breakpoint(1000px) {
+			font-size: 2rem;
+		}
 	}
 
 	.sub-heading {
 		font-size: 1.5rem;
 		font-weight: 400;
 		text-align: center;
+
+		@include breakpoint(1000px) {
+			font-size: 1rem;
+		}
 	}
 
 	.choices {
 		font-size: 6rem;
 		text-align: center;
 		font-weight: 300;
+
+		@include breakpoint(1000px) {
+			font-size: 3rem;
+		}
 
 		span {
 			cursor:pointer;
