@@ -81,6 +81,8 @@
         every user but here is a basic beginning list -
     </p>
 
+    <img src="{{ asset('img/gif/isbetter.gif') }}">
+
     <h2>MEDICINE is Better. ADOPTION is Better.
     PEOPLE are Better. CHOICE is Better.</h2>
 
