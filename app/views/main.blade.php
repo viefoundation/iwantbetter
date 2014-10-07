@@ -50,7 +50,7 @@
         </nav>
 
         <div class="sidebar-info">
-            <p class="version-info">V - 1.1</p>
+            <p class="version-info">V - 1.2</p>
             <p class="fine-print">Public Domain 2014</p>
         </div>
 

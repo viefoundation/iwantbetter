@@ -301,6 +301,10 @@ html, body {
 		width:100%;
 		display: block;
 		margin:50px auto 50px auto;
+
+		@include breakpoint(1000px) {
+			margin-bottom: 20px;
+		}
 	}
 
 	.paragraph-twitter {
