@@ -564,7 +564,7 @@ var Paragraphs = {
 
 			//console.log($(this).offset().top)
 
-			if ($(this).offset().top < Paragraphs.windowHeight / 3 && $(this).offset().top > -20 ) {
+			if ($(this).offset().top < Paragraphs.windowHeight / 4 && $(this).offset().top > -20 ) {
 
 				$(this).css('background-color', 'yellow');
 
