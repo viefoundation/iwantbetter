@@ -807,7 +807,6 @@ var Paragraphs = {
 
 		Paragraphs.highlightedSections.each(function() {
 
-			//console.log($(this).offset().top)
 
 			if ($(this).offset().top < Paragraphs.windowHeight / 6.667 && $(this).offset().top > -20 ) {
 
@@ -820,11 +819,6 @@ var Paragraphs = {
 			}
 
 		});
-
-
-		// console.log("this is happening");
-
-
 
 		requestAnimationFrame(Paragraphs.highlights);
 

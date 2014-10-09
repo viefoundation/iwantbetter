@@ -32,6 +32,8 @@
                 needed to truly solve this issue.</span>
     </p>
 
+    <img src="{{ asset('img/still.jpg'); }}">
+
     <p>Inspiring and enabling change will lead us to better. Legislation, policy, guilt, emotional
         ploy, hate &amp; animosity will not give it to us. {{ HTML::twitter(null, 'Inspiring & enabling change will lead us to better - Legislation, policy, guilt, emotional ploy, hate & animosity will not. #inspirechange', '#inspirechange', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
     </p>
