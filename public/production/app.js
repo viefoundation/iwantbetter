@@ -764,6 +764,7 @@ var Paragraphs = {
 		var _ = this;
 
 		_.progressIndicator();
+		_.highlightsActivate();
 
 	},
 
@@ -794,6 +795,32 @@ var Paragraphs = {
 			
 		});
 
+	},
+
+	highlightedSections : $(".highlight"),
+
+	highlights : function() {
+
+		var _ = this;
+
+		// _.highlightedSections.each(function() {
+
+		// 	console.log($(this).offset().top)
+
+		// });
+
+
+		// console.log("this is happening");
+
+
+
+		requestAnimationFrame(Paragraphs.highlights);
+
+	},	
+
+	highlightsActivate : function() {
+
+		requestAnimationFrame(Paragraphs.highlights);
 
 	}
 
