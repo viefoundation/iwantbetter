@@ -114,6 +114,14 @@ $text-color : #1E1C1D;
 }
 
 
+.highlight {
+	// background-color: #F7EC37;
+	background-color: yellow;
+	border-radius: 10px;
+	// display: inline-block;
+	line-height: 1rem;
+}
+
 html, body {
 
 	background-color: $gray;
@@ -264,9 +272,14 @@ html, body {
 
 .paragraph-section {
 	background-color: white;
-	width:43%;
+	// width:43%;
+	width:826px;
 	position: relative;
 	margin:75px auto;
+
+	@include breakpoint(856px) {
+		width:75%;
+	}
 
 	@include breakpoint(small) {
 		width:75%;
