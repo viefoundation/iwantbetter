@@ -18,7 +18,7 @@
 		  <form action="{{ route('addCustomer') }}" method="POST" id="braintree-payment-form" class="form_style">
 		    <p class="give-name">
 		      <label>Name</label>
-		      <input tabindex=1 type="text" name="first_name" id="first_name" value="Full Name" onfocus="if (this.value=='Name') this.value='';" placeholder="Full Name"></input>
+		      <input tabindex=1 type="text" name="first_name" id="first_name" value="Full Name" onfocus="if (this.value=='Full Name') this.value='';" placeholder="Full Name"></input>
 		    </p>
 		    <p class="give-email">
 		      <label for="email_address">Email Address</label>
@@ -30,11 +30,11 @@
 		    </p>
 		    <p class="give-expires">
 		      <label id="exp">Exp.</label>
-		      <input tabindex=4 placeholder="MM" type="text" size="2" id="expiration_month" data-encrypted-name="month" value="MM" onfocus="if (this.value=='00') this.value='';"/> / <input tabindex=5 placeholder="YYYY" type="text" size="4" data-encrypted-name="year"  id="expiration_year" value="YYYY" onfocus="if (this.value=='00') this.value='';"/>
+		      <input tabindex=4 placeholder="MM" type="text" size="2" id="expiration_month" data-encrypted-name="month" value="MM" onfocus="if (this.value=='MM') this.value='';"/> / <input tabindex=5 placeholder="YYYY" type="text" size="4" data-encrypted-name="year"  id="expiration_year" value="YYYY" onfocus="if (this.value=='YYYY') this.value='';"/>
 		    </p>
 		    <p class="give-cvv">
 		      <label>CVV</label>
-		      <input tabindex=6 placeholder="CVV" type="text" size="4" id="cvv" autocomplete="off" data-encrypted-name="cvv" value="CVV" onfocus="if (this.value=='CCV') this.value='';"/>
+		      <input tabindex=6 placeholder="CVV" type="text" size="4" id="cvv" autocomplete="off" data-encrypted-name="cvv" value="CVV" onfocus="if (this.value=='CVV') this.value='';"/>
 		    </p>
 		    <p class="give-amount" id="amount">
 		      <select id="selector" name="selector">

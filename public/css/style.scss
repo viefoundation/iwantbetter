@@ -1660,6 +1660,7 @@ button {
 			border-bottom:solid gray thin;
 			letter-spacing: 1px;
 			clear:both;
+			margin-bottom: 5px;
 			// text-align:
 
 			@include breakpoint(1000px) {
