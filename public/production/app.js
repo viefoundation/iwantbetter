@@ -799,15 +799,27 @@ var Paragraphs = {
 
 	highlightedSections : $(".highlight"),
 
+	windowHeight : $(window).height(),
+
 	highlights : function() {
 
 		var _ = this;
 
-		// _.highlightedSections.each(function() {
+		Paragraphs.highlightedSections.each(function() {
 
-		// 	console.log($(this).offset().top)
+			//console.log($(this).offset().top)
 
-		// });
+			if ($(this).offset().top < Paragraphs.windowHeight / 3 && $(this).offset().top > -20 ) {
+
+				$(this).css('background-color', 'yellow');
+
+			} else {
+
+				$(this).css('background-color', 'transparent');
+
+			}
+
+		});
 
 
 		// console.log("this is happening");

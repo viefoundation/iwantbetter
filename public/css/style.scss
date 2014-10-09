@@ -120,6 +120,8 @@ $text-color : #1E1C1D;
 	border-radius: 10px;
 	// display: inline-block;
 	line-height: 1rem;
+
+	@include transition(all .2s linear);
 }
 
 html, body {
