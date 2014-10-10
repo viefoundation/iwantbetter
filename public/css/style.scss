@@ -338,6 +338,10 @@ html, body {
 			width:300px;
 			display: none;
 
+			@include breakpoint(small) {
+				width:75%;
+			}
+
 		}
 
 		@include breakpoint(1000px) {
