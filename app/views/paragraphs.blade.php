@@ -32,7 +32,26 @@
                 needed to truly solve this issue.</span>
     </p>
 
-    <img src="{{ asset('img/still.jpg'); }}">
+    <div class="paragraph-image-container">
+        <img class="paragraph-image" src="{{ asset('img/still.jpg'); }}">
+
+
+
+        <div class="share-fill-container">
+            <div class="share-fill share-fill-pinterest"></div>
+        </div>
+
+       
+        <a class="share-icon share-to-pinterest" data-share-to="pinterest" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fiwantbetter.org%0A&media={{urlencode( asset('img/still.jpg') )}}&description={{urlencode('The official logo of the I Want Better Campaign')}}"
+                data-pin-do="buttonPin"
+                data-pin-config="above">
+            <i class="fa fa-pinterest " ></i>
+        </a>
+
+         <img class="share-title" src="{{ asset('img/pin-text.svg') }}">
+        
+    </div>
+    
 
     <p>Inspiring and enabling change will lead us to better. Legislation, policy, guilt, emotional
         ploy, hate &amp; animosity will not give it to us. {{ HTML::twitter(null, 'Inspiring & enabling change will lead us to better - Legislation, policy, guilt, emotional ploy, hate & animosity will not. #inspirechange', '#inspirechange', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
@@ -83,7 +102,23 @@
         every user but here is a basic beginning list -
     </p>
 
-    <img src="{{ asset('img/gif/isbetter.gif') }}">
+    <div class="paragraph-image-container">
+        <img class="paragraph-image" src="{{ asset('img/gif/isbetter.gif') }}">
+        
+     
+
+        <div class="share-fill-container">
+            <div class="share-fill share-fill-pinterest"></div>
+        </div>
+
+        <a class="share-icon share-to-pinterest" data-share-to="pinterest" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fiwantbetter.org%0A&media={{urlencode( asset('img/gif/isbetter.gif') )}}&description={{urlencode('...is better than abortion.')}}"
+                data-pin-do="buttonPin"
+                data-pin-config="above">
+            <i class="fa fa-pinterest " ></i>
+        </a>
+
+        <img class="share-title" src="{{ asset('img/pin-text.svg') }}">
+    </div>
 
     <h2>MEDICINE is Better. ADOPTION is Better.
     PEOPLE are Better. CHOICE is Better.</h2>

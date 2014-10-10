@@ -312,6 +312,7 @@ var ShareIcons = {
 		var _ = this;
 
 		$(".share-icon").hover(function() {
+
 			_.shareAnimation($(this), 'in');
 		}, function() {
 			_.shareAnimation($(this), 'out');
@@ -320,32 +321,40 @@ var ShareIcons = {
 	},
 
 	shareAnimation : function(element, direction) {
+		// NOTE : changed $elem.closest('.square') to $elem.closest('.share-fill-container')
+		// to deal with pinterest sharing specific to v 1.2. Will need to figure out solution
+		// for original grid use when the time comes.
+
 
 		var $elem = element;
 	
 		if(direction == 'in') {
 
+
 			if ($elem.attr('data-share-to') == 'twitter') {
-				var fill = $elem.closest('.square').find('.share-fill-twitter')
+				var fill = $elem.parent().find('.share-fill-twitter')
 			} else
 			if ($elem.attr('data-share-to') == 'pinterest') {
-				var fill = $elem.closest('.square').find('.share-fill-pinterest')
+				var fill = $elem.parent().find('.share-fill-pinterest')
+
 			}
 			
 			
 			fill.stop().addClass('share-fill-enlarge');
+			$elem.siblings('.share-title').stop().fadeIn('fast');
 			
 		} else 
 		if (direction == 'out') {
 
 			if ($elem.attr('data-share-to') == 'twitter') {
-				var fill = $elem.closest('.square').find('.share-fill-twitter')
+				var fill = $elem.parent().find('.share-fill-twitter')
 			} else
 			if ($elem.attr('data-share-to') == 'pinterest') {
-				var fill = $elem.closest('.square').find('.share-fill-pinterest')
+				var fill = $elem.parent().find('.share-fill-pinterest')
 			}
 
 			fill.stop().removeClass('share-fill-enlarge');
+			$elem.siblings('.share-title').stop().fadeOut('fast');
 		}
 
 	}
@@ -856,6 +865,31 @@ var Twitter = {
 
 }
 
+var Pinterest = {
+
+	init : function() {
+		var _ = this;
+
+		_.popup();
+
+	},
+
+	popup : function() {
+
+		$(".share-to-pinterest").click(function() {
+
+			var url = $(this).attr('href');
+
+			window.open(url,"", "height=500px, width=500px");
+
+			return false;
+
+		});
+
+	}
+
+}
+
 var Footer = {
 
 	init : function() {
@@ -983,7 +1017,7 @@ headerEl.addEventListener('click', function() {
 
 
 $(document).ready(function() {
-	//ShareIcons.init();
+	ShareIcons.init();
 	//Squares.init();
 	//Posters.init();
 	//Svg.init();
@@ -991,6 +1025,7 @@ $(document).ready(function() {
 	Walkthrough.init();
 	Paragraphs.init();
 	Twitter.init();
+	Pinterest.init();
 	Footer.init();
 	ScrollTop.init();
 	

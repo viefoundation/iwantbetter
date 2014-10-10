@@ -157,9 +157,6 @@ html, body {
 		background-attachment: fixed;
 	}
 
-
-
-
 }
 
 
@@ -318,14 +315,42 @@ html, body {
 
 	}
 
-	img {
+	.paragraph-image-container {
 		width:100%;
-		display: block;
+		height:auto;
+		position: relative;
 		margin:50px auto 50px auto;
+
+		i {
+			position: absolute;
+			display: block;
+			z-index: 9;
+			right:10px;
+			bottom: 10px;
+			color:white;
+			font-size: 2rem;
+			cursor: pointer;
+
+		}
+
+		.share-title {
+			@include center;
+			width:300px;
+			display: none;
+
+		}
 
 		@include breakpoint(1000px) {
 			margin-bottom: 20px;
 		}
+	}
+
+	img {
+		width:100%;
+		display: block;
+		
+
+		
 	}
 
 	.paragraph-twitter {
@@ -510,12 +535,16 @@ $padding-half : $padding / 2;
 	.share-fill {
 		position: absolute;
 		border-radius: 50%;
-		width:1000px;
-		height:1000px;
-		bottom:-75%;
-		right:-75%;
+		width:1400px;
+		height:1400px;
+		// bottom-55%;
+		// right:-55%;
+		left:96%;
+		top:96%;
+		@include transform(translate(-50%,-50%) scale3d(0.001,0.001,1));
 		// padding-bottom: 50%;
-		@include transform(scale3d(0.001,0.001,1));
+		// @include transform(scale3d(0.001,0.001,1));
+		@include transform-origin(center center);
 		//@include transform(scale(1, 1));
 		@include transition(all .4s ease);
 		// background-color: red;
@@ -531,7 +560,7 @@ $padding-half : $padding / 2;
 	}
 
 	.share-fill-enlarge {
-		@include transform(scale3d(1.5, 1.5, 1));
+		@include transform(translate(-50%,-50%) scale3d(1.8, 1.8, 1));
 	} 
 
 	
