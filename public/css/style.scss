@@ -1297,11 +1297,20 @@ button {
 	display: none;
 
 	@include breakpoint(1000px) {
-		top:25px;
-		left:25px;
-		display: block;
+		top:15px;
+		left:7px;
+		width:27px;
+		height:15px;
 		
 	}
+
+	// @include breakpoint(small) {
+	// 	top:15px;
+	// 	left:7px;
+	// 	width:27px;
+	// 	height:15px;
+		
+	// }
 
 
 	.patty {
