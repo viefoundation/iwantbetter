@@ -244,19 +244,6 @@ $.each(h,function(e,t){g.isNode(t)&&s.call(t)});var E=$.extend({},v.defaults,P),
 // Place any jQuery/helper plugins in here.
 
 
-
-
-app.controller('NavController', function($scope) {
-
-	$scope.atHero = false;
-	$scope.atParagraphs = false;
-	$scope.atFooter = false;
-
-});
-
-
-
-
 var requestAnimationFrame = window.requestAnimationFrame || 
                             window.mozRequestAnimationFrame || 
                             window.webkitRequestAnimationFrame ||
@@ -459,6 +446,7 @@ var Svg = {
 
 var Nav = {
 
+	// Called in main.blade.php
 	init : function() {
 		var _ = this;
 
@@ -892,6 +880,7 @@ var Pinterest = {
 
 var Footer = {
 
+	// Called in main.blade.php
 	init : function() {
 		var _ = this;
 
@@ -1021,7 +1010,7 @@ $(document).ready(function() {
 	//Squares.init();
 	//Posters.init();
 	//Svg.init();
-	Nav.init();
+	//Nav.init();
 	Walkthrough.init();
 	Paragraphs.init();
 	Twitter.init();

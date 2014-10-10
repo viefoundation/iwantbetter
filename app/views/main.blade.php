@@ -166,6 +166,14 @@
 
             var app = angular.module('iwantbetter', []);
 
+            app.controller('NavController', function($scope) {
+
+                $scope.atHero = false;
+                $scope.atParagraphs = false;
+                $scope.atFooter = false;
+
+            });
+
             app.controller('FormController', function($scope, $http) {
 
 
@@ -251,7 +259,16 @@
         </script>
         <script src="{{ asset('js/main.js') }}"></script>
 
+        <script>
 
+            $(document).ready(function() {
+
+                Nav.init();
+                Footer.init();
+
+            });
+
+        </script>
         
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
