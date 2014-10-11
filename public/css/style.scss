@@ -1017,6 +1017,7 @@ form {
 	width:500px;
 	background-color: transparent;
 	border-radius: 0;
+	box-shadow:none;
 
 	@include placeholder {
 		color:black;
@@ -1048,6 +1049,7 @@ form {
 	font-family: $opensans;
 	font-weight: 300;
 	background-color: transparent;
+	box-shadow: none;
 	@include appearance(none);
 
 	@include placeholder {
