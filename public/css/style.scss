@@ -525,7 +525,14 @@ $padding-half : $padding / 2;
 	}
 
 }
+	
+.share-icon {
 
+	@include breakpoint(small) {
+		display: none;
+	}
+
+}
 
 .share-fill-container {
 	position: absolute;
