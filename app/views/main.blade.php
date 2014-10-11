@@ -257,7 +257,7 @@
 
             });
         </script>
-        <script src="{{ asset('js/main.js') }}"></script>
+        <script src="{{ asset('production/app.min.js') }}"></script>
 
         <script>
 
