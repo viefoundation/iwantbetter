@@ -1837,9 +1837,20 @@ button {
 }
 
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+   
+	.hero-content-container {
+		.read-more-button {
+			margin-bottom: 0px;
+			margin-top: 5px;
+		}
 
-
-
+		.heading {
+			font-size: 1.1rem;
+		}
+	}
+    
+}
 
 
 
