@@ -42,7 +42,7 @@
         </div>
 
        
-        <a class="share-icon share-to-pinterest" data-share-to="pinterest" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fiwantbetter.org%0A&media={{urlencode( asset('img/still.jpg') )}}&description={{urlencode('The official logo of the I Want Better Campaign')}}"
+        <a class="share-icon share-to-pinterest" data-share-to="pinterest" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fiwantbetter.org%0A&media={{urlencode( asset('img/still.jpg') )}}&description={{urlencode('No wrong answer, what is better? The official logo of the I Want Better Campaign')}}"
                 data-pin-do="buttonPin"
                 data-pin-config="above">
             <i class="fa fa-pinterest " ></i>
@@ -111,7 +111,7 @@
             <div class="share-fill share-fill-pinterest"></div>
         </div>
 
-        <a class="share-icon share-to-pinterest" data-share-to="pinterest" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fiwantbetter.org%0A&media={{urlencode( asset('img/gif/isbetter.gif') )}}&description={{urlencode('...is better than abortion.')}}"
+        <a class="share-icon share-to-pinterest" data-share-to="pinterest" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fiwantbetter.org%0A&media={{urlencode( asset('img/gif/isbetter.gif') )}}&description={{urlencode('...is better than abortion. And much more, want better with me #iwantbetter')}}"
                 data-pin-do="buttonPin"
                 data-pin-config="above">
             <i class="fa fa-pinterest " ></i>
