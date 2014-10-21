@@ -1015,7 +1015,7 @@ $(document).ready(function() {
 	Paragraphs.init();
 	Twitter.init();
 	Pinterest.init();
-	Footer.init();
+	//Footer.init();
 	ScrollTop.init();
 	
 	
