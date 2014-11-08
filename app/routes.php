@@ -60,6 +60,13 @@ Route::get('style', function() {
 });
 
 
+Route::get('posters', function() {
+
+	return View::make('temporary/temporaryGrid');
+
+});
+
+
 
 
 
