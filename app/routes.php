@@ -58,3 +58,9 @@ Route::get('style', function() {
 	return View::make('style');
 
 });
+
+
+
+
+
+
