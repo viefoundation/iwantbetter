@@ -47,6 +47,21 @@
 		        <option>
 		          $20
 		        </option>
+		        <option>
+		          $40
+		        </option>
+		        <option>
+		          $50
+		        </option>
+		        <option>
+		          $80
+		        </option>
+		        <option>
+		          $100
+		        </option>
+		        <option>
+		          $200
+		        </option>
 		      </select>
 		      <span>(Tap to Adjust)</span> - A MONTH
 		    </p>

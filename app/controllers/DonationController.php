@@ -48,22 +48,29 @@ class DonationController extends BaseController {
 
 		switch($amount) {
 			case "$5":
-				$plan = 'fiveaweek';
+				$plan = 'fiveamonth';
 				break;
 			case "$10":
-				$plan = 'tenaweek';
+				$plan = 'tenamonth';
 				break;
 			case "$20":
-				$plan = 'twentyaweek';
+				$plan = 'fiveaweek';
+				break;
+			case "$40" : 
+				$plan = 'tenaweek';
 				break;
 			case "$50":
-				$plan = 'fiftyaweek';
+				$plan = 'fiftyamonth';
+				break;
+			case "$80" : 
+				$plan = 'eightyamonth';
+				break;
 			case "$100":
-				$plan = 'onehundredaweek';
+				$plan = 'onehundredamonth';
 				break;
 			case "$200":
-				$plan = 'twohundredaweek';
-				break;
+				$plan = 'fiftyaweek';
+			
 		}
 
 		try {
