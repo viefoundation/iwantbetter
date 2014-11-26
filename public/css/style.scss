@@ -1373,7 +1373,9 @@ button {
 	}
 
 	p:last-child {
-		color:darken($gray, 10%);
+		//color:darken($gray, 10%);
+
+		@extend .email;
 	}
 
 	@include breakpoint(1000px) {
@@ -1513,6 +1515,21 @@ button {
 	}
 }
 
+.email {
+	font-weight: 300;
+	font-size: 2.5rem;
+	color:darken($gray, 10%);
+	@include transition(all .25s linear);
+
+	&:hover {
+		color:$green;
+	}
+
+	@include breakpoint(1000px) {
+		font-size: 1.75rem;
+	}
+}
+
 .giving-container {
 
 	width:1000px;
@@ -1548,21 +1565,6 @@ button {
 			font-size: 1.1rem;
 			color:#979A9D;
 			margin-bottom: 20px;
-		}
-
-		.email {
-			font-weight: 300;
-			font-size: 2.5rem;
-			color:darken($gray, 10%);
-			@include transition(all .25s linear);
-
-			&:hover {
-				color:$green;
-			}
-
-			@include breakpoint(1000px) {
-				font-size: 1.75rem;
-			}
 		}
 
 		@include breakpoint(1000px) {
