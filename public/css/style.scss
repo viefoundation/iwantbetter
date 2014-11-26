@@ -1553,6 +1553,11 @@ button {
 			font-weight: 300;
 			font-size: 2.5rem;
 			color:darken($gray, 10%);
+			@include transition(all .25s linear);
+
+			&:hover {
+				color:$green;
+			}
 
 			@include breakpoint(1000px) {
 				font-size: 1.75rem;
