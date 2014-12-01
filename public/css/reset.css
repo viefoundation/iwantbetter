@@ -17,7 +17,7 @@ p {
 }
 body, html {
 	width:100%;
-	height:auto;
+	height:100%;
 	-webkit-font-smoothing:antialiased;
 }
 div, span, p, a{

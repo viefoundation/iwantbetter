@@ -127,7 +127,7 @@ $text-color : #1E1C1D;
 html, body {
 
 	background-color: $gray;
-	// overflow:hidden;
+	overflow:hidden;
 	-webkit-overflow-scrolling: touch;
 	
 }
@@ -141,7 +141,7 @@ html, body {
 	position: relative;
 	z-index: 2;
 	// background-color: white;
-	// -webkit-overflow-scrolling: touch;
+	-webkit-overflow-scrolling: touch;
 
 }
 
