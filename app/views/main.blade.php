@@ -90,10 +90,13 @@
 
             </div>
             
+
             <!-- include paragraphs -->
             <div class="paragraphs-background" id="paragraphs-background">
                 @include ('paragraphs')
             </div>
+
+
             
             <div class="paragraphs-section-progress"><span id="percentage">0</span>%</div>
 

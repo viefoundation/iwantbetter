@@ -321,17 +321,7 @@ html, body {
 		position: relative;
 		margin:50px auto 50px auto;
 
-		i {
-			position: absolute;
-			display: block;
-			z-index: 9;
-			right:10px;
-			bottom: 10px;
-			color:white;
-			font-size: 2rem;
-			cursor: pointer;
-
-		}
+		
 
 		.share-title {
 			@include center;
@@ -516,17 +506,53 @@ $padding-half : $padding / 2;
 	right:$padding;
 	bottom: $padding;
 
+}
 
-	i {
-		display: block;
-		color:white;
-		font-size: 2.2rem;
-		margin-top: 7px;
+.square {
+
+	.share-title {
+		@include center;
+		width:300px;
+		display: none;
+
+		@include breakpoint(small) {
+			width:75%;
+		}
+
 	}
-
+		
 }
 	
 .share-icon {
+
+	&:last-of-type {
+
+		i {
+			bottom:50px;
+		}
+
+	}
+
+	&:first-of-type {
+		
+		i {
+			bottom: 10px;
+		}
+
+	}
+
+	
+
+	i {
+
+		position: absolute;
+		display: block;
+		z-index: 9;
+		color:white;
+		font-size: 2.2rem;
+		cursor: pointer;
+		right:10px;
+	}
 
 	@include breakpoint(small) {
 		display: none;

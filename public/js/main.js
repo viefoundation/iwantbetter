@@ -74,29 +74,35 @@ var ShareIcons = {
 
 
 			if ($elem.attr('data-share-to') == 'twitter') {
-				var fill = $elem.parent().find('.share-fill-twitter')
+
+				var fill = $elem.parent().find('.share-fill-twitter');
+				$elem.siblings('.tweet-share-title').stop().fadeIn('fast');
+
 			} else
 			if ($elem.attr('data-share-to') == 'pinterest') {
-				var fill = $elem.parent().find('.share-fill-pinterest')
+
+				var fill = $elem.parent().find('.share-fill-pinterest');
+				$elem.siblings('.pin-share-title').stop().fadeIn('fast');
 
 			}
-			
-			
+				
 			fill.stop().addClass('share-fill-enlarge');
-			$elem.siblings('.share-title').stop().fadeIn('fast');
+			// $elem.siblings('.share-title').stop().fadeIn('fast');
 			
 		} else 
 		if (direction == 'out') {
 
 			if ($elem.attr('data-share-to') == 'twitter') {
-				var fill = $elem.parent().find('.share-fill-twitter')
+				var fill = $elem.parent().find('.share-fill-twitter');
+				$elem.siblings('.tweet-share-title').stop().fadeOut('fast');
 			} else
 			if ($elem.attr('data-share-to') == 'pinterest') {
-				var fill = $elem.parent().find('.share-fill-pinterest')
+				var fill = $elem.parent().find('.share-fill-pinterest');
+				$elem.siblings('.pin-share-title').stop().fadeOut('fast');
 			}
 
 			fill.stop().removeClass('share-fill-enlarge');
-			$elem.siblings('.share-title').stop().fadeOut('fast');
+			// $elem.siblings('.share-title').stop().fadeOut('fast');
 		}
 
 	}
@@ -110,7 +116,7 @@ var Posters = {
 
 		$(".active").each(function() {
 			_.setClickListener($(this));
-			//_.setBackground($(this));
+			_.setBackground($(this));
 		});
 
 	},
@@ -762,8 +768,8 @@ headerEl.addEventListener('click', function() {
 
 $(document).ready(function() {
 	ShareIcons.init();
-	//Squares.init();
-	//Posters.init();
+	Squares.init();
+	Posters.init();
 	//Svg.init();
 	//Nav.init();
 	Walkthrough.init();

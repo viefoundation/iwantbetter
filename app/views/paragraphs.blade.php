@@ -42,13 +42,13 @@
         </div>
 
        
-        <a class="share-icon share-to-pinterest" data-share-to="pinterest" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fiwantbetter.org%0A&media={{urlencode( asset('img/still.jpg') )}}&description={{urlencode('No wrong answer, what is better? The official logo of the I Want Better Campaign')}}"
+        <a class="share-icon share-to-pinterest" data-share-to="pinterest" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fiwantbetter.org%0A&amp;media={{urlencode( asset('img/still.jpg') )}}&amp;description={{urlencode('No wrong answer, what is better? The official logo of the I Want Better Campaign')}}"
                 data-pin-do="buttonPin"
                 data-pin-config="above">
             <i class="fa fa-pinterest " ></i>
         </a>
 
-         <img class="share-title" src="{{ asset('img/pin-text.svg') }}">
+        <img class="share-title pin-share-title" src="{{ asset('img/pin-text.svg') }}">
         
     </div>
     
@@ -111,13 +111,13 @@
             <div class="share-fill share-fill-pinterest"></div>
         </div>
 
-        <a class="share-icon share-to-pinterest" data-share-to="pinterest" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fiwantbetter.org%0A&media={{urlencode( asset('img/gif/isbetter.gif') )}}&description={{urlencode('...is better than abortion. And much more, want better with me #iwantbetter')}}"
+        <a class="share-icon share-to-pinterest" data-share-to="pinterest" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fiwantbetter.org%0A&amp;media={{urlencode( asset('img/gif/isbetter.gif') )}}&amp;description={{urlencode('...is better than abortion. And much more, want better with me #iwantbetter')}}"
                 data-pin-do="buttonPin"
                 data-pin-config="above">
             <i class="fa fa-pinterest " ></i>
         </a>
 
-        <img class="share-title" src="{{ asset('img/pin-text.svg') }}">
+        <img class="share-title pin-share-title" src="{{ asset('img/pin-text.svg') }}">
     </div>
 
     <h2>MEDICINE is Better. ADOPTION is Better.
@@ -179,6 +179,11 @@
 
     <h2><span class="bold">INSPIRE CHANGE</span><br>It’s a More Worthy Cause than Legislating it</h2>
 
+</div>
+
+@include('grid')
+
+<div class="paragraph-section">
     <p>Real change may not ever come from any other source. It’s been told to us throughout the 
         years that if you want change start with yourself. Do! You’re worth it. Others may watch and  
         learn while seeing new possibilities attainable. All by the simple, personal pursuit of 
@@ -232,36 +237,6 @@
         have real control of, myself. </h2>
 
 
-   
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
