@@ -150,7 +150,10 @@ var Posters = {
 
 	show : function($element) {
 
+		var photo = $element.attr('data-poster-path');
+
 		$(".grid-container").velocity({right: '90%'}, 1500, 'easeOutExpo').addClass('shifted');
+		$("#full-poster-image").attr('src', photo);
 
 	},
 

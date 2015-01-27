@@ -301,4 +301,12 @@
         </div>
     </div>
 
+    <div class="clear"></div>
+
+    <div class="photo-present-container">
+
+        <img id="full-poster-image" src="{{ asset('img/test10.jpg') }}">
+
+    </div>    
+
 </div>
