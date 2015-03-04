@@ -179,11 +179,11 @@
 
     <h2><span class="bold">INSPIRE CHANGE</span><br>It’s a More Worthy Cause than Legislating it</h2>
 
-</div>
+{{-- </div> --}}
 
-@include('grid')
+{{--@include('grid')--}}
 
-<div class="paragraph-section">
+{{-- <div class="paragraph-section"> --}}
     <p>Real change may not ever come from any other source. It’s been told to us throughout the 
         years that if you want change start with yourself. Do! You’re worth it. Others may watch and  
         learn while seeing new possibilities attainable. All by the simple, personal pursuit of 

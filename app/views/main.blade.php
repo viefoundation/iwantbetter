@@ -145,7 +145,7 @@
 
                     <div class="footer-links">
                         <p><span class="bold"><a target="_blank" href=" {{ url('give') }} ">$</a></span> <span class="faded">|</span> <a href="mailto:ilike@iwantbetter.org">ILIKE@IWANTBETTER.ORG</a> <span class="faded">|</span> <a target="_blank" href="{{ url('style') }}">STYLE GUIDE</a> <span class="faded">|</span> <a target="_blank" href="{{ url('partners') }}">CORPORATE PARTNERSHIP</a> <span class="faded">|</span> <a target="_blank" href="{{ url('privacy') }}">PRIVACY POLICY</a> <span class="faded">|</span> <a target="_blank" href="{{ url('press') }}">PRESS RELEASE</a> <span class="faded">|</span> VIE - <span class="faded">501(c)(3)NON PROFIT ORG.</span></p>
-                        <p><span class="bold">Public Domain 2014</span> - Free to Use by All.</p>
+                        <p><span class="bold">Public Domain 2014 - {{ date('Y') }}</span> - Free to Use by All.</p>
                     </div>
 
                 </div>
@@ -273,13 +273,15 @@
 
         </script>
         
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+       <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-46881632-3', 'auto');
+         ga('send', 'pageview');
+
+       </script>
     </body>
 </html>
