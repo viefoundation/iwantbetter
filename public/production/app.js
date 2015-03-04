@@ -912,12 +912,9 @@ var Footer = {
 		var scrolled = $(".container").scrollTop();
 		var activatePoint = containerHeight - (Footer.footerHeight / 4) - $(window).height();
 
-
-
 		if (scrolled > activatePoint) {
 
 			var distance = scrolled - (containerHeight - (containerHeight - activatePoint));
-
 			var moveBy = 500 - (distance * 4);
 
 			if (moveBy > 0) {

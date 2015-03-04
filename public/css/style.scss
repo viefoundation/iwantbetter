@@ -70,6 +70,9 @@ $text-color : #1E1C1D;
 	@if $point == small {
     	@media (max-width: 500px) { @content; }
 	}
+	@else if $point == mobile {
+		@media (max-width: 1050px) { @content; }
+	}
 	@else if $point == medium {
     	@media (max-width: 1250px) { @content; }
 	}
@@ -339,7 +342,7 @@ html, body {
 
 		}
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			margin-bottom: 20px;
 		}
 	}
@@ -359,7 +362,7 @@ html, body {
 			color:$twitter;
 		}
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			color:$twitter;
 		}
 	}
@@ -844,7 +847,7 @@ nav {
 	img {
 		width:40px;
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			width:32px;
 		}
 	}
@@ -891,7 +894,7 @@ nav {
 		margin-top: 7px;
 	}
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		display: none;
 	}
 
@@ -905,7 +908,7 @@ nav {
 	overflow: hidden;
 	background-color: white;
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		overflow: auto;
 		height:auto;
 		position: static;	
@@ -916,7 +919,7 @@ nav {
 		display: block;
 		margin:0px auto 15px auto;
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			width:200px;
 		}
 	}
@@ -931,7 +934,7 @@ nav {
 		font-size: 1.1rem;
 		font-weight: normal;
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			margin-bottom: 20px;
 			font-size: 1rem;
 			width:85%;
@@ -967,7 +970,7 @@ nav {
 		margin:50px 60px;
 		// @include box-sizing(border-box);
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			float:none;
 			margin: 50px 40px;
 		}
@@ -990,7 +993,7 @@ nav {
 			margin-bottom: 10px;
 			font-weight: 300;
 
-			@include breakpoint(1000px) {
+			@include breakpoint(mobile) {
 				font-size: 2rem;
 				text-align: center;
 			}
@@ -1001,19 +1004,19 @@ nav {
 			font-weight: 300;
 			margin-top: 30px;
 
-			@include breakpoint(1000px) {
+			@include breakpoint(mobile) {
 				font-size: 1.8rem;
 			}
 		}
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			float:none;
 			text-align: center;
 			margin:50px auto 200px auto;
 		}
 	}
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		position: relative;
 		height:auto;
 		overflow: auto;
@@ -1039,7 +1042,7 @@ nav {
 		width:30%;
 		top:45%;
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			width:80%;
 		}
 	}
@@ -1049,7 +1052,7 @@ nav {
 		font-size: 4rem;
 		font-weight: 300;
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			font-size: 2rem;
 		}
 	}
@@ -1059,7 +1062,7 @@ nav {
 		font-weight: 400;
 		text-align: center;
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			font-size: 1rem;
 		}
 	}
@@ -1069,7 +1072,7 @@ nav {
 		text-align: center;
 		font-weight: 300;
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			font-size: 3rem;
 		}
 
@@ -1105,7 +1108,7 @@ form {
 
 	@include ellipsis;
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		width:100%;
 		font-size: 1.5rem;
 		margin-top: 10px;
@@ -1136,7 +1139,7 @@ form {
 		color:black;
 	}
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		width:100%;
 		font-size: 1.5rem;
 		margin-bottom: 20px;
@@ -1157,7 +1160,7 @@ form {
 .submit-line {
 	margin-top: 50px;
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		margin-top: 0px; 
 	}
 
@@ -1195,7 +1198,7 @@ button {
 	    border-top: 45px solid $gray;
 	    border-right: 20px solid transparent;
 
-	    @include breakpoint(1000px) {
+	    @include breakpoint(mobile) {
 	    	display: none;
 	    }
 	}
@@ -1210,7 +1213,7 @@ button {
 
 		@include transform(rotate(25deg));
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			display: none;
 		}
 	}
@@ -1219,7 +1222,7 @@ button {
 		outline:none;
 	}
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		float:none;
 		width:100%;
 		// margin-top: 20px;
@@ -1253,12 +1256,12 @@ button {
 	p:last-child {
 		float:right;
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			float:left;
 		}
 	}
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		font-size: .7rem;
 	}
 }
@@ -1308,7 +1311,7 @@ button {
 	position: relative;
 	z-index: 9;
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		height:50px;
 	}
 
@@ -1318,7 +1321,7 @@ button {
 		list-style:none;
     	white-space: nowrap;
 
-    	@include breakpoint(1000px) {
+    	@include breakpoint(mobile) {
     		display: none;
     	}
 	}
@@ -1364,7 +1367,7 @@ button {
 	display: none;
 	font-weight: bold;
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		display: block;
 	}
 }
@@ -1451,7 +1454,7 @@ button {
 		@extend .email;
 	}
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		@include center;
 		top:120px;
 		font-size: 1.7rem;
@@ -1476,7 +1479,7 @@ button {
 	width:22%;
 	@include animation(gearSpinForward 20s linear infinite);
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		display: none;
 	}
 
@@ -1488,7 +1491,7 @@ button {
 	left:10%;
 	width:25%;
 	@include animation(gearSpinBackward 20s linear infinite);
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		display: none;
 	}
 }
@@ -1500,7 +1503,7 @@ button {
 	width:33%;
 	@include animation(gearSpinForward 20s linear infinite);
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		top:80%;
 		left:-10%;
 		width:50%;
@@ -1514,7 +1517,7 @@ button {
 	width: 35%;
 	@include animation(gearSpinBackward 20s linear infinite);
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		top:60%;
 		left:35%;
 		width:70%;
@@ -1528,7 +1531,7 @@ button {
 	width:18%;
 	@include animation(gearSpinForward 20s linear infinite);
 	
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		top:40%;
 		left:75%;
 		width:35%;
@@ -1565,7 +1568,7 @@ button {
 		color:darken($gray, 10%);
 		margin-bottom: 20px;
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			font-size: 1.5rem;
 		}
 	}
@@ -1580,7 +1583,7 @@ button {
 
 	}
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		width:100%;
 		padding: 40px;
 		@include box-sizing(border-box);
@@ -1598,7 +1601,7 @@ button {
 		color:$green;
 	}
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		font-size: 1.75rem;
 	}
 }
@@ -1611,7 +1614,7 @@ button {
 	padding-bottom: 50px;
 	overflow: auto;
 
-	@include breakpoint(1000px) {
+	@include breakpoint(mobile) {
 		width:100%;
 		margin-top: 0;
 	}
@@ -1640,7 +1643,7 @@ button {
 			margin-bottom: 20px;
 		}
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			width:100%;
 			padding: 40px;
 			float:none;
@@ -1654,7 +1657,7 @@ button {
 		// padding: 0 0 0 70px;
 		// @include box-sizing(border-box);
 
-		@include breakpoint(1000px) {
+		@include breakpoint(mobile) {
 			@include box-sizing(border-box);
 			width:100%;
 			padding: 40px;
@@ -1679,7 +1682,7 @@ button {
 			margin-bottom:20px;
 
 
-			@include breakpoint(1000px) {
+			@include breakpoint(mobile) {
 				width:100%;
 			}
 
@@ -1712,7 +1715,7 @@ button {
 			letter-spacing: -1px;
 			border-radius: 0px;
 
-			@include breakpoint(1000px) {
+			@include breakpoint(mobile) {
 				font-size: 1.5rem;
 			}
 		}
@@ -1758,7 +1761,7 @@ button {
 			// margin-left:90px;
 			margin-right: 10px;
 
-			@include breakpoint(1000px) {
+			@include breakpoint(mobile) {
 				width:100% !important;
 			}
 		}
@@ -1766,7 +1769,7 @@ button {
 		.give-state {
 			width:48%!important;
 			float:left;
-			@include breakpoint(1000px) {
+			@include breakpoint(mobile) {
 				width:100% !important;
 			}
 		}
@@ -1792,7 +1795,7 @@ button {
 			width: 40% !important;
 			// margin-left:25px;
 
-			@include breakpoint(1000px) {
+			@include breakpoint(mobile) {
 				width:100% !important;
 			}
 		}
@@ -1811,7 +1814,7 @@ button {
 			margin-bottom: 5px;
 			// text-align:
 
-			@include breakpoint(1000px) {
+			@include breakpoint(mobile) {
 				font-size: 18px;
 			}
 		}
@@ -1819,7 +1822,7 @@ button {
 			font-size:15px;
 			margin-left:-5px;
 
-			@include breakpoint(1000px) {
+			@include breakpoint(mobile) {
 				font-size: 8px;
 			}
 		}
