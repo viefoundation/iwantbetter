@@ -30,22 +30,24 @@ class DonationController extends BaseController {
 
 		} catch (Exception $e) {
 			
-			echo ($e)
-
-			echo("Validation errors:<br/>");
-
-			foreach (($result->errors->deepAll()) as $error) {
-			    echo("- " . $error->message . "<br/>");
-			}
-
-			echo("</br><a href='javascript:javascript:history.go(-1)'>Go Back</a>");
+			Log::error($e);
 
 		}
 		
 
 		if ($create_customer->success) {
 
-			return Redirect::route('subscribeCustomer', ['customerId' => $result->customer->id, 'amount' => $amount]);
+			return Redirect::route('subscribeCustomer', ['customerId' => $create_customer->customer->id, 'amount' => $amount]);
+
+		} else {
+
+			echo("Validation errors:<br/>");
+
+			foreach (($create_customer->errors->deepAll()) as $error) {
+			    echo("- " . $error->message . "<br/>");
+			}
+
+			echo("</br><a href='javascript:javascript:history.go(-1)'>Go Back</a>");
 
 		}
 
