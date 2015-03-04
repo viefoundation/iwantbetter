@@ -4,36 +4,27 @@ class DonationController extends BaseController {
 
 	public function create() {
 
-		try {
-			
-			$create_customer = Braintree_Customer::create([
+		$create_customer = Braintree_Customer::create([
 
-				"firstName"       => Input::get('first_name'),
-				"lastName"        => Input::get('last_name'),
-				'email'           => Input::get('email_address'),
-				"creditCard"      => [
-				    "number"          => Input::get('number'),
-				    "expirationMonth" => Input::get('month'),
-				    "expirationYear"  => Input::get('year'),
-				    "cvv"             => Input::get('cvv'),
-				    "billingAddress"  => [
-				        "postalCode"      => Input::get('postal_code'),
-				        "streetAddress"   => Input::get('mailing_address'),
-				        "locality"        => Input::get('city'),
-				        "region"          => Input::get('state')
-				    ]
-				]
+			"firstName"       => Input::get('first_name'),
+			"lastName"        => Input::get('last_name'),
+			'email'           => Input::get('email_address'),
+			"creditCard"      => [
+			    "number"          => Input::get('number'),
+			    "expirationMonth" => Input::get('month'),
+			    "expirationYear"  => Input::get('year'),
+			    "cvv"             => Input::get('cvv'),
+			    "billingAddress"  => [
+			        "postalCode"      => Input::get('postal_code'),
+			        "streetAddress"   => Input::get('mailing_address'),
+			        "locality"        => Input::get('city'),
+			        "region"          => Input::get('state')
+			    ]
+			]
 
-			]);
+		]);
 
-			$amount = Input::get('amount');
-
-		} catch (Exception $e) {
-			
-			Log::error($e);
-
-		}
-		
+		$amount = Input::get('amount');
 
 		if ($create_customer->success) {
 
