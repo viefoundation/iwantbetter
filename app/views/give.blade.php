@@ -26,15 +26,15 @@
 		    </p>
 		    <p class="give-card">
 		      <label>Card Number</label>
-		      <input tabindex=3 placeholder="Credit Card Number" type="text" size="20" id="card_number" autocomplete="off" data-encrypted-name="number" value="Credit Card Number" onfocus="if (this.value=='Credit Card Number') this.value='';"/>
+		      <input tabindex=3 placeholder="Credit Card Number" type="text" size="20" id="card_number" name="card_number" autocomplete="off" data-encrypted-name="number" value="Credit Card Number" onfocus="if (this.value=='Credit Card Number') this.value='';"/>
 		    </p>
 		    <p class="give-expires">
 		      <label id="exp">Exp.</label>
-		      <input tabindex=4 placeholder="MM" type="text" size="2" id="expiration_month" data-encrypted-name="month" value="MM" onfocus="if (this.value=='MM') this.value='';"/> / <input tabindex=5 placeholder="YYYY" type="text" size="4" data-encrypted-name="year"  id="expiration_year" value="YYYY" onfocus="if (this.value=='YYYY') this.value='';"/>
+		      <input tabindex=4 placeholder="MM" type="text" size="2" id="expiration_month" name="expiration_month" data-encrypted-name="month" value="MM" onfocus="if (this.value=='MM') this.value='';"/> / <input tabindex=5 placeholder="YYYY" type="text" size="4" data-encrypted-name="year"  id="expiration_year" name="expiration_year" value="YYYY" onfocus="if (this.value=='YYYY') this.value='';"/>
 		    </p>
 		    <p class="give-cvv">
 		      <label>CVV</label>
-		      <input tabindex=6 placeholder="CVV" type="text" size="4" id="cvv" autocomplete="off" data-encrypted-name="cvv" value="CVV" onfocus="if (this.value=='CVV') this.value='';"/>
+		      <input tabindex=6 placeholder="CVV" type="text" size="4" id="cvv" name="cvv" autocomplete="off" data-encrypted-name="cvv" value="CVV" onfocus="if (this.value=='CVV') this.value='';"/>
 		    </p>
 		    <p class="give-amount" id="amount">
 		      <select id="selector" name="selector">

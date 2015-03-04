@@ -10,9 +10,9 @@ class DonationController extends BaseController {
 			"lastName"        => Input::get('last_name'),
 			'email'           => Input::get('email_address'),
 			"creditCard"      => [
-			    "number"          => Input::get('number'),
-			    "expirationMonth" => Input::get('month'),
-			    "expirationYear"  => Input::get('year'),
+			    "number"          => Input::get('card_number'),
+			    "expirationMonth" => Input::get('expiration_month'),
+			    "expirationYear"  => Input::get('expiration_year'),
 			    "cvv"             => Input::get('cvv'),
 			    "billingAddress"  => [
 			        "postalCode"      => Input::get('postal_code'),
