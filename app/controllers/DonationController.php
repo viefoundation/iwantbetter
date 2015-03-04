@@ -43,7 +43,7 @@ class DonationController extends BaseController {
 
 			echo("Validation errors:<br/>");
 
-			foreach (($create_customer->errors->deepAll()) as $error) {
+			foreach ($create_customer->errors->deepAll() as $error) {
 			    echo("- " . $error->message . "<br/>");
 			}
 
