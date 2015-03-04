@@ -26,7 +26,7 @@
 		    </p>
 		    <p class="give-card">
 		      <label>Card Number</label>
-		      <input tabindex=3 placeholder="Credit Card Number" type="text" size="20" id="card_number" name="card_number" autocomplete="off" data-encrypted-name="number" value="Credit Card Number" onfocus="if (this.value=='Credit Card Number') this.value='';"/>
+		      <input tabindex=3 placeholder="Credit Card Number" type="text" size="20" id="card_number" name="card_number" autocomplete="off" data-encrypted-name="card_number" value="Credit Card Number" onfocus="if (this.value=='Credit Card Number') this.value='';"/>
 		    </p>
 		    <p class="give-expires">
 		      <label id="exp">Exp.</label>
@@ -38,28 +38,28 @@
 		    </p>
 		    <p class="give-amount" id="amount">
 		      <select id="selector" name="selector">
-		        <option selected="selected">
+		        <option selected="selected" value="5">
 		          $5
 		        </option>
-		        <option>
+		        <option value="10">
 		          $10
 		        </option>
-		        <option>
+		        <option value="20">
 		          $20
 		        </option>
-		        <option>
+		        <option value="40">
 		          $40
 		        </option>
-		        <option>
+		        <option value="50">
 		          $50
 		        </option>
-		        <option>
+		        <option value="80">
 		          $80
 		        </option>
-		        <option>
+		        <option value="100">
 		          $100
 		        </option>
-		        <option>
+		        <option value="200">
 		          $200
 		        </option>
 		      </select>

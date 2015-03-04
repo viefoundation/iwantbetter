@@ -31,7 +31,7 @@ Route::get('give', function() {
 Route::post('give/customer', ['as' => 'addCustomer', 'uses' => 'DonationController@create']);
 Route::get('give/subscribe/{customerId}/{amount}', ['as' => 'subscribeCustomer', 'uses' => 'DonationController@subscribe']);
 Route::get('give/thankyou', ['as' => 'thankyou', 'uses' => 'DonationController@thanks']);
-	
+
 
 
 Route::get('partners', function() {
