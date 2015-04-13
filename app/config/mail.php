@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'ilike@iwantbetter.org',
+	'username' => $_ENV['mail.username'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'iLOVEearth!',
+	'password' => $_ENV['mail.password'],
 
 	/*
 	|--------------------------------------------------------------------------

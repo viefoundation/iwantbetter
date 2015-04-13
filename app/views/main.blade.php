@@ -144,7 +144,7 @@
                     </div>
 
                     <div class="footer-links">
-                        <p><span class="bold"><a target="_blank" href=" {{ url('give') }} ">$</a></span> <span class="faded">|</span> <a href="mailto:ilike@iwantbetter.org">ILIKE@IWANTBETTER.ORG</a> <span class="faded">|</span> <a target="_blank" href="{{ url('style') }}">STYLE GUIDE</a> <span class="faded">|</span> <a target="_blank" href="{{ url('partners') }}">CORPORATE PARTNERSHIP</a> <span class="faded">|</span> <a target="_blank" href="{{ url('privacy') }}">PRIVACY POLICY</a> <span class="faded">|</span> <a target="_blank" href="{{ url('press') }}">PRESS RELEASE</a> <span class="faded">|</span> <a href="http://viefoundation.org">VIE</a> - <span class="faded">501(c)(3)NON PROFIT ORG.</span></p>
+                        <p><span class="bold"><a target="_blank" href=" {{ url('give') }} ">$</a></span> <span class="faded">|</span> <a href="mailto:ilike@iwantbetter.org">ILIKE@IWANTBETTER.ORG</a> <span class="faded">|</span> <a target="_blank" href="{{ url('style') }}">STYLE GUIDE</a> <span class="faded">|</span> <a target="_blank" href="{{ url('partners') }}">CORPORATE PARTNERSHIP</a> <span class="faded">|</span> <a target="_blank" href="{{ url('privacy') }}">PRIVACY POLICY</a> <span class="faded">|</span> <a target="_blank" href="{{ url('press') }}">PRESS RELEASE</a> <span class="faded">|</span> <a href="http://viefoundation.org" target="_blank">VIE</a> - <span class="faded">501(c)(3)NON PROFIT ORG.</span></p>
                         <p><span class="bold">Public Domain 2014 - {{ date('Y') }}</span> - Free to Use by All.</p>
                     </div>
 
