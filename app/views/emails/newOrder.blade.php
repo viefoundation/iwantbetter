@@ -67,8 +67,13 @@
 								<td align="center" valign="top">
 
 									<p>{{{ $name }}} just ordered a sticker. </p>
+									<p>Email : {{{ $email }}}</p>
+									<br>
 									<p>Their address is :</p>
-									<p>{{{ $address1 . " " . $address2 }}}</p>
+									<br>
+									<p>{{{ $name }}}</p>
+									<p>{{{ $address1 }}} </p>
+									<p>{{{ $address2 }}}</p>
 
 								</td>
 							</tr>
