@@ -20,7 +20,7 @@
     </p>
 
     <h2>The Official Icon of the I Want Better 
-        campaign is the greater than symbol (>). </h2>
+        campaign is the greater-than symbol (>). </h2>
 
     <p>This mark was chosen to represent this cause because of its origin and the disposition it
         conveyed. It was found in the topic itself: Abortion. <span class="highlight">Turning the capital A on it’s side</span> posed a 
