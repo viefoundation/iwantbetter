@@ -24,11 +24,8 @@
 </div>
 
 <div class="video-container">
-    <video id="walkthrough-video" autoplay loop muted>
-        <source src="{{ asset('img/walkthrough.mp4') }}" type="video/mp4">
-        <source src="{{ asset('img/walkthrough.ogv') }}" type="video/ogg">
-        Your browser does not support this video. Please upgrade to a modern browser.
-    </video>
+
+    <iframe id="walkthrough-video" src="https://player.vimeo.com/video/105067552?autoplay=1&loop=1&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     
 </div>
 
@@ -84,9 +81,9 @@
 
         </div>
 
-        <img src="img/iwb-logo.svg">
+       {{--  <img src="img/iwb-logo.svg">
         <span class="image-description">- <span class="bold">A new campaign</span> privately developed for public use -</span>
-
+ --}}
         <div class="footer" id="footer">
 
             <div class="form-container" >

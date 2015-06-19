@@ -178,7 +178,6 @@ html, body {
 .video-container {
 
 	background-color: white;
-	// @include center;
 	background-image: none;
 	top:0;
 	left:0;
@@ -199,7 +198,9 @@ html, body {
 
 	#walkthrough-video {
 		width:100%;
-		// position: fixed;
+		height:114%;
+		
+		@include center;
 
 		@include breakpoint(medium) {
 			display: none;
