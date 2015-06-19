@@ -727,62 +727,123 @@ var Footer = {
 
  }
 
- var headerEl = document.querySelector('.back-to-top');
+ 
 
 var scrollToTop = function(el) {
 
-  el = typeof el === 'object' ? el : document.querySelector(el);
-  if (!el) { return; }
-
-  var offset = el.scrollTop;
-  if (offset === 0) { return; }
-
-  //el.style.overflow = 'hidden'; // stops momentum scrolling
-  var stepSize = offset / (offset < 1000 ?  15 : 30);
-
-  var _animate = function() {
-
-    el.scrollTop -= stepSize;
-
-    if (el.scrollTop > 0) { // keep scrolling up
-      setTimeout(_animate, 10);
-    }
-    else { // enough
-      _onFinish();
-    }
-  };
-
-  var _onFinish = function() {
-   // el.style.overflow = 'scroll'; 
-    
-  };
-
-  _animate();
+ 
 };
 
 
-headerEl.addEventListener('click', function() {
-  window.scrollToTop('.container');
-});
+
+
+var ScrollUp = {
+
+	init : function() {
+
+		var headerEl = document.querySelector('.back-to-top');
+
+		headerEl.addEventListener('click', function() {
+
+			this.toTop('.container');
+
+		});
+
+	},
+
+	toTop : function(element) {
+
+		element = typeof element === 'object' ? element : document.querySelementector(element);
+		if (!element) { return; }
+
+		var offset = element.scrollTop;
+		if (offset === 0) { return; }
+
+		//element.style.overflow = 'hidden'; // stops momentum scrolling
+		var stepSize = offset / (offset < 1000 ?  15 : 30);
+
+		this.animate(element);
+
+	},
+
+	animate : function(element) {
+
+		element.scrollTop -= stepSize;
+
+		if (element.scrollTop > 0) { // keep scrolling up
+		  setTimeout(this.animate, 10);
+		}
+
+	}
+
+}
+
+
+function measureText(txt, font) {
+    var id = 'text-width-tester',
+        $tag = $('#' + id);
+    if (!$tag.length) {
+        $tag = $('<span id="' + id + '" style="display:none;font:' + font + ';">' + txt + '</span>');
+        $('body').append($tag);
+    } else {
+        $tag.css({font:font}).html(txt);
+    }
+    return {
+        width: $tag.width(),
+        height: $tag.height()
+    }
+}
+
+function shrinkToFill(input, fontSize, fontWeight, fontFamily) {
+    var $input = $(input),
+        txt = $input.val(),
+        maxWidth = $input.width() + 5, // add some padding
+        font = fontWeight + " " + fontSize + "px " + fontFamily;
+    // see how big the text is at the default size
+    var textWidth = measureText(txt, font).width;
+    if (textWidth > maxWidth) {
+        // if it's too big, calculate a new font size
+        // the extra .9 here makes up for some over-measures
+        fontSize = fontSize * maxWidth / textWidth * .9;
+        font = fontWeight + " " + fontSize + "px " + fontFamily;
+        // and set the style on the input
+        $input.css({font:font});
+    } else {
+        // in case the font size has been set small and 
+        // the text was then deleted
+        $input.css({font:font});
+    }
+}
 
 
 $(document).ready(function() {
-	ShareIcons.init();
-	Squares.init();
-	Posters.init();
-	//Svg.init();
-	//Nav.init();
-	Walkthrough.init();
-	Paragraphs.init();
-	Twitter.init();
-	Pinterest.init();
-	//Footer.init();
-	ScrollTop.init();
-	
-	
 
+	if (CONFIG.page === 'home') {
 
-    
+		ShareIcons.init();
+		Squares.init();
+		Posters.init();
+		Nav.init();
+		Walkthrough.init();
+		Paragraphs.init();
+		Twitter.init();
+		Pinterest.init();
+		Footer.init();
+		ScrollUp.init();
+		ScrollTop.init();
+
+	}
+
+	
+	if (CONFIG.page === 'digital-interaction') {
+
+		$("#di-user-input").keyup(function() {
+			console.log("bam");
+	        shrinkToFill(this, '90', "", "Open Sans, sans-serif");
+	    });
+
+	}
+	
 });
 
 $(window).resize(function() {

@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/', ['as' => 'home', function()
 {
 	return View::make('main');
-});
+}]);
 
 
 
@@ -67,7 +67,13 @@ Route::get('posters', function() {
 });
 
 
+Route::get('digital-interaction', ['as' => 'digital-interaction', function() {
 
+	return View::make('digital-interaction');
+
+}]);
+
+Route::resource('interaction', 'InteractionController', ['except' => ['create']]);
 
 
 

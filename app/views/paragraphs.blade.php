@@ -1,9 +1,26 @@
+<?php
+    
+
+
+    function twitter($text, $title = null)
+    {
+
+        $text = urlencode($text);
+
+        $parsed_url = 'https://twitter.com/share?url=' .  ' \'\' '  . '&amp;text=' . $text; 
+
+        return '<a href="' . $parsed_url . '" target="_blank" class="share-to-twitter paragraph-twitter">' . $title . '</a>';
+
+    }
+
+ ?>
+
 <div class="paragraph-section">
     
     <h2>I Want Better is that "easier" enablement. It's a new way to deal with the abortion topic.</h2>
 
     <p><span class="bold">Instead of one side or the other, I Want Better enables you to stand for what you believe
-            in, <span class="highlight">even next to others whose beliefs are not exact to yours.</span></span> {{ HTML::twitter(null, 'Nobody really likes abortion, to be for something better should be a lot easier than it is. I Want Better makes it easier. #goodforall', '#goodforall', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
+            in, <span class="highlight">even next to others whose beliefs are not exact to yours.</span></span> {{ twitter('Nobody really likes abortion, to be for something better should be a lot easier than it is. I Want Better makes it easier. #goodforall', '#goodforall') }}
     </p>
 
     <p>These three words (I Want Better) take a difficult topic usually navigated by people groups - 
@@ -54,7 +71,7 @@
     
 
     <p>Inspiring and enabling change will lead us to better. Legislation, policy, guilt, emotional
-        ploy, hate &amp; animosity will not give it to us. {{ HTML::twitter(null, 'Inspiring & enabling change will lead us to better - Legislation, policy, guilt, emotional ploy, hate & animosity will not. #inspirechange', '#inspirechange', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
+        ploy, hate &amp; animosity will not give it to us. {{ twitter('Inspiring & enabling change will lead us to better - Legislation, policy, guilt, emotional ploy, hate & animosity will not. #inspirechange', '#inspirechange') }}
     </p>
 
     <p class="faded">Below you will find an expanded commentary to the video playing above. Throughout you 
@@ -65,7 +82,7 @@
 
     <p>This may be a bit of a juvenile statement yet <span class="highlight">iconic</span> in the least and most of all - <span class="highlight">side 
             transcending.</span> It instantly says I am on neither side. It’s deep if you let it sink in and if not, it’s 
-        still very catchy. {{ HTML::twitter(null, 'Abortion sucks! And so does goverment control. #fresh #iwantbetter', '#fresh', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
+        still very catchy. {{ twitter('Abortion sucks! And so does goverment control. #fresh #iwantbetter', '#fresh') }}
     </p>
 
     <p>So, is this "prochoice" or "prolife"?</p>
@@ -79,7 +96,7 @@
     <p>In most cases if the topic of abortion is being spoken of these terms are involved. This blurb 
         wants to make very clear that <span class="highlight">this campaign is not about either of these terms</span>, but about the 
         superlative pursuit of better - a very subjective term, yes. The user should be free to use it 
-        personally. {{ HTML::twitter(null, 'I want nothing to do with prolife vs prochoice, but I do believe we the human race can do better than abortion. #iwantbetter', '#notprolife #notprochoice #iwantbetter', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
+        personally. {{ twitter('I want nothing to do with prolife vs prochoice, but I do believe we the human race can do better than abortion. #iwantbetter', '#notprolife #notprochoice #iwantbetter') }}
     </p>
 
     <p>The asterisk is there to convey that this blurb is not meant to pick on either of those 
@@ -125,7 +142,7 @@
 
     <p>The examples here <span class="highlight">ambiguously break the mold of both categorical sides</span> in a thought 
         provoking, artful and inspirational way. <span class="highlight">The topic needs such thrust, such allowance.</span> These 
-        public service announcements help. {{ HTML::twitter(null, 'Medicine is better. Adoption is better. Choice is better. People are better. #abortion #iwantbetter ', '#abortion', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
+        public service announcements help. {{ twitter('Medicine is better. Adoption is better. Choice is better. People are better. #abortion #iwantbetter ', '#abortion') }}
     </p>
 
     <h2>Prolife vs Prochoice should not be the 
@@ -137,7 +154,7 @@
         define as better might seem problematic, it is a much improved atmosphere for us to apply 
         our efforts to this cause. <span class="highlight">The purposeful subjectivity</span> and <span class="highlight">abstractness of this campaign is 
                 meant to bring a paradigm shift that allows all of us, as differing as we may be, to be part of a 
-                bigger whole without disabling logistics.</span> {{ HTML::twitter(null, 'Prochoice vs Prolife should not be the only way for us to deal with the #abortion topic so #iwantbetter was made.', '#7Billion', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
+                bigger whole without disabling logistics.</span> {{ twitter('Prochoice vs Prolife should not be the only way for us to deal with the #abortion topic so #iwantbetter was made.', '#7Billion') }}
     </p>
 
     <h2>A Common Goal - <span class="bold">LET’S SOLVE OUR 
@@ -153,7 +170,7 @@
         connection to the whole world at the touch of a finger /24 hours a day, cures for age old 
         diseases, racial and gender equality - <span class="highlight">we should just be able to do better than abortion</span>. I 
         Want Better is a call to the innate innovative spirit of mankind to create real solution to this 
-        topic and build a better tomorrow. {{ HTML::twitter(null, 'Let\'s solve our need for abortion. Ps. Outlawing is not solving. #humanscan #iwantbetter', '#HumansCan', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
+        topic and build a better tomorrow. {{ twitter('Let\'s solve our need for abortion. Ps. Outlawing is not solving. #humanscan #iwantbetter', '#HumansCan') }}
     </p>
 
     <h2>PREVENTION is Better. SCIENCE is Better.
@@ -174,7 +191,7 @@
     <p>The list of what is better is not ruled by extremists or their viewpoints, but instead it calls to 
         all humanity. <span class="highlight">It implores us to reach for better, to be our best</span>. Hence, the <span class="highlight">Official Color</span> of this 
         campaign is <span class="highlight">Metallic Gold</span> (and other forms of yellow). <span class="highlight">Gold is a reminder in a universal 
-                language to be the best we can be. Go for Gold.</span> {{ HTML::twitter(null, 'I Want Better calls to all humanity. #goforgold #iwantbetter', '#goforgold', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
+                language to be the best we can be. Go for Gold.</span> {{ twitter('I Want Better calls to all humanity. #goforgold #iwantbetter', '#goforgold') }}
     </p>
 
     <h2><span class="bold">INSPIRE CHANGE</span><br>It’s a More Worthy Cause than Legislating it</h2>
@@ -207,14 +224,14 @@
     <p>The very simplistic mentality contained in the three words I Want Better, facilitates the ability 
         for us, even in all our differences, to be together under a basic campaign. <span class="highlight">Starting first and 
                 foremost with self and perhaps self only.</span> I Want Better allows any level of commitment from 
-        it’s user. The abortion topic needs such freedom of use. {{ HTML::twitter(null, 'Look what I found! A new way to deal with the abortion topic. #finally #iwantbetter', '#finally', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }}
+        it’s user. The abortion topic needs such freedom of use. {{ twitter('Look what I found! A new way to deal with the abortion topic. #finally #iwantbetter', '#finally') }}
     </p>
 
     <h2><span class="regular">THIS IS A CAUSE</span>, NOT A DEBATE.</h2>
 
     <p>There is a foaming at the mouth by some users when engaged with this topic. It is important 
         to understand <span class="highlight">this cause needs our love, our creativity and if at all possible our togetherness.</span> 
-        This is a cause, not a war against each other. {{ HTML::twitter(null, 'This cause needs our love, creativity and if at all possible our togetherness. This is a cause, not a war against each other. #iwantbetter', '#causenotdebate', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }} 
+        This is a cause, not a war against each other. {{ twitter('This cause needs our love, creativity and if at all possible our togetherness. This is a cause, not a war against each other. #iwantbetter', '#causenotdebate') }} 
     </p>
 
     <h2>THIS IS <span class="regular">NOT RELIGION.</span></h2>
@@ -223,14 +240,14 @@
         better and or believing humanity is capable of more does not come with the mandate to 
         belong to any religion. <span class="highlight">Whatever you call yourself, whoever you are - I Want Better is for you.</span> 
         Want better anyway you see fit and I will do the same, hopefully there will be 7 billion other 
-        users. That is change. {{ HTML::twitter(null, 'This is not religion. #iLike #iwantbetter', '#iLikeIWantBetter', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }} 
+        users. That is change. {{ twitter('This is not religion. #iLike #iwantbetter', '#iLikeIWantBetter') }} 
     </p>
 
     <h2>THIS IS <span class="bold">NOT POLITICS.</span> THIS IS FOR YOU.</h2>
 
     <p>This cause is <span class="highlight">so wrongfully handicapped by the side vs side disposition</span> of world politics, it is 
         very important to break free of this. Allowing users the ability to deal with this topic in an 
-        effective and productive manner will <span class="highlight">urge on a thriving of solutionable steps.</span>  {{ HTML::twitter(null, 'This is not politics. This is for you. #userfriendly #iwantbetter', '#userfriendly', ['target' => '_blank', 'class' => 'share-to-twitter paragraph-twitter']) }} 
+        effective and productive manner will <span class="highlight">urge on a thriving of solutionable steps.</span>  {{ twitter('This is not politics. This is for you. #userfriendly #iwantbetter', '#userfriendly') }} 
     </p>
 
     <h2>I Want Better - mainly because that is all I 

@@ -10,6 +10,8 @@ $gray : #F0F1F2;
 $yellow : #F9E400;
 $green : #22a301;
 $text-color : #1E1C1D;
+$dark : #292627;
+$di-theme : #F3F315;
 
 //Mixins
 @mixin center {
@@ -114,6 +116,12 @@ $text-color : #1E1C1D;
 }
 .green {
 	color:$green;
+}
+
+.yellow {
+
+	color:$di-theme;
+
 }
 
 .clear {
@@ -1945,17 +1953,205 @@ button {
 
 
 
+.interaction-container {
+
+	position: relative;
+	background-color: $dark;
+	width:100%;
+	width:100vw;
+	height:100%;
+	height:100vh;
+
+}
+
+.interaction-inner-container {
+
+	@include center;
+	width:100%;
+	font-family: $opensans;
+	color:white;
+
+	h1 {
+
+		width:500px;
+		margin:0 auto;
+		font-weight: 300;
+		font-size: 2.2rem;
+		text-align: center;
+		line-height: 2.5rem;
+		margin-top: 80px;
+		margin-bottom: 60px;
+
+	}
+
+	h2 {
+
+		text-transform: uppercase;
+		font-size: 1rem;
+		text-align: center;
+
+	}
+
+}
+
+.equation-container {
+
+	position: relative;
+	margin:0 auto;
+	width:1300px;
+	height:225px;
+
+	img {
+
+		height:100%;
+		@include center;
+
+	}
+
+	@include breakpoint(1400px) {
+
+		width:1100px;
+		height:175px;
+
+	}
+
+	@include breakpoint(1150px) {
+
+		width:1000px;
+		height:125px;
+
+	}
+
+}
+
+.equation-title {
+
+	color:white;
+	font-family: $opensans;
+	text-transform: uppercase;
+	font-size: 6.2rem;
+	letter-spacing: -5px;
+	font-weight: bold;
+	// float:right;
+	@include centerRight;
+
+	@include breakpoint(1400px) {
+
+		font-size: 5.5rem;
+
+	}
+
+	@include breakpoint(1150px) {
+
+		font-size: 5rem;
+
+	}
+
+}
+
+
+.equation-input {
+
+	@include centerLeft;
+	width:480px;
+
+	input {
+
+		width:100%;
+		font-family: $opensans;
+		// font-weight: bold;
+		letter-spacing: -3px;
+		color: white;
+		background-color: transparent;
+		border:none;
+		outline: none;
+		border-bottom: 20px solid $di-theme;
+		// font-size: 5.5rem;
+		font-size: 90px;
+		height:105px;
+		text-align: center;
+
+
+	}
+
+	@include breakpoint(1400px) {
+
+		width:400px;
+
+	}
+
+}
+
+.psa-list-container {
+
+	width:480px;
+	position: relative;
+	top:60px;
+
+}
+
+.psa {
+
+	position: absolute;
+	width:100%;
+	font-family: $opensans;
+	color:white;
+	// font-weight: bold;
+	letter-spacing: -3px;
+	font-size: 5rem;
+	display: block;
+	white-space: nowrap;
+	text-align: center;
+	@include transition(all .2s ease-in-out);
+	
+
+	&.faded {
+
+		opacity: 0.05;
+
+	}
+
+	&.post-visible {
 
 
 
+	}
+
+
+}
 
 
 
+.di-share-container {
 
+	@include center;
+	left:65%;
+	top:65%;
+	width:260px;
 
+	h3 {
 
+		font-size: 2rem;
+		letter-spacing: -2px;
+		line-height: 1.1;
+		margin-bottom: 20px;
 
+	}
 
+	i {
 
+		font-size: 2.25rem;
+		width:25%;
 
+	}
+
+	p {
+
+		margin-top: 20px;
+		font-size: .8rem;
+		text-transform: uppercase;
+
+	}
+
+}
 

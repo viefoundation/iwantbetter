@@ -7,10 +7,13 @@ module.exports = function(grunt) {
         concat: {
             dist : {
                 src : [
-                    'js/vendor/angular.min.js',
                     'js/vendor/velocity.min.js',
                     'js/plugins.js',
-                    'js/main.js'
+                    'js/main.js',
+                    'js/config.js',
+                    'js/factories.js',
+                    'js/directives.js',
+                    'js/controllers/*.js'
                 ],
                 dest: 'production/app.js'
             }

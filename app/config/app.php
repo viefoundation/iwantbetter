@@ -121,7 +121,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'Bradleyboy\Laravel\BraintreeServiceProvider'
+		'Bradleyboy\Laravel\BraintreeServiceProvider',
+		'Way\Generators\GeneratorsServiceProvider'
 
 	),
 
