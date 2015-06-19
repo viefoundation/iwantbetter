@@ -120,6 +120,11 @@
     
 </div>
 
+<script type="text/javascript">
+    myVid = document.getElementById("walkthrough-video");
+    myVid.muted = true;
+</script>
+
 @stop
 
 
