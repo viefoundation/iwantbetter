@@ -12,20 +12,20 @@
 
 <nav ng-controller="NavController">
     <ul>
-        <li><a href="#hero" ng-class="{viewing: atHero}">Gallery Video</a></li>               
-        <li><a href="#paragraphs-background" ng-class="{viewing: atParagraphs}">Read More</a></li>
-        <li><a href="#footer-container" ng-class="{viewing: atFooter}">For You</a></li>
+        <li><a href="#hero" ng-class="{viewing: atHero}">Diversity Video</a></li>               
+        <li><a href="#paragraphs-background" ng-class="{viewing: atParagraphs}">Campaign Intro</a></li>
+        <li><a href="#freesticker" ng-class="{viewing: atFooter}">Free Sticker</a></li>
     </ul>
 </nav>
 
 <div class="sidebar-info">
-    <p class="version-info">V - 1.2</p>
+    <p class="version-info">V - 1.3</p>
     <p class="fine-print">Public Domain 2014 - {{ date('Y') }}</p>
 </div>
 
 <div class="video-container">
 
-    <iframe id="walkthrough-video" src="https://player.vimeo.com/video/105067552?autoplay=1&loop=1&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <iframe id="hero-video" src="https://player.vimeo.com/video/131256671?autoplay=1&loop=1&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     
 </div>
 
@@ -37,13 +37,13 @@
 
     <div class="hero" id="hero">
        
-        <div class="hero-content-container">
+        {{-- <div class="hero-content-container">
             <p class="heading uppercase"><span class="bold">Nobody really likes abortion</span>, so to be for something
                 better should be a lot easier than it is.</p>
             
             <a href="#paragraphs-background"><div class="read-more-button"><p>READ MORE</p></div></a>
             <a href="https://vimeo.com/105067552" target="_blank"><div class="read-more-button" id="video-button"><p>GALLERY</p></div></a>
-        </div>
+        </div> --}}
 
         <div class="arrow-down"><img src="{{ asset('img/arrow-down.png') }}"></div>
 
@@ -51,7 +51,7 @@
         <img class="twitter-share-video-text" src="{{ asset('img/tweet-text.svg') }}">
 
         <div class="twitter-share-video">
-            <a href="https://twitter.com/share?url=http%3A%2F%2Fwww.vimeo.com%2F105067552&amp;text=A%20Better%20Way%20to%20Talk%20About%20Abortion." target="_blank" class="share-to-twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://twitter.com/share?url=http%3A%2F%2Fwww.vimeo.com%2F131256671&amp;text=A%20Better%20Way%20to%20Talk%20About%20Abortion." target="_blank" class="share-to-twitter"><i class="fa fa-twitter"></i></a>
         </div>
 
     </div>
@@ -67,7 +67,7 @@
     <div class="paragraphs-section-progress"><span id="percentage">0</span>%</div>
 
 
-    <div class="footer-container" id="footer-container" ng-controller="FormController">
+    <div class="footer-container" id="freesticker" ng-controller="FormController">
 
         <div class="success-overlay" ng-show="successPrompt" ng-cloak>
 
@@ -86,9 +86,9 @@
  --}}
         <div class="footer" id="footer">
 
-            <div class="form-container" >
+            <div class="form-container">
 
-                <p class="tagline">Like what you see, Want a sticker?</p>
+                <p class="tagline">Like what you see, Want a free sticker?</p>
 
                 <form ng-submit="submit()">
                     <p><input class="inputs" type="text" name="full_name" placeholder="Full Name" ng-model="submission.fullName" required></p>
@@ -106,7 +106,7 @@
                 <p class="letter-tape">&nbsp;&nbsp;<span class="regular">Be Inspired.</span>&nbsp;</p><br>
                 <p class="letter-tape">&nbsp;&nbsp;Use Information.&nbsp;</p><br>
                 <p class="letter-tape">&nbsp;&nbsp;Inspire Others.&nbsp;</p>
-                <p><a href="mailto:ilike@iwantbetter.org"></a>www.iwantbetter.org</p>
+                <p><a href="mailto:ilike@iwantbetter.org"></a>iwantbetter.org</p>
             </div>
 
             <div class="footer-links">
@@ -121,8 +121,8 @@
 </div>
 
 <script type="text/javascript">
-    myVid = document.getElementById("walkthrough-video");
-    myVid.muted = true;
+   var heroVideo = document.getElementById("hero-video");
+    heroVideo.muted = true;
 </script>
 
 @stop

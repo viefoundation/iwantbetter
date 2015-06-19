@@ -17,7 +17,7 @@
 
 <div class="paragraph-section">
     
-    <h2>I Want Better is that "easier" enablement. It's a new way to deal with the abortion topic.</h2>
+    <h2>Nobody really likes abortion, so to be for something better should be a lot easier than it is. I Want Better is that “easier” enablement. It is a new way to deal with the abortion topic.</h2>
 
     <p><span class="bold">Instead of one side or the other, I Want Better enables you to stand for what you believe
             in, <span class="highlight">even next to others whose beliefs are not exact to yours.</span></span> {{ twitter('Nobody really likes abortion, to be for something better should be a lot easier than it is. I Want Better makes it easier. #goodforall', '#goodforall') }}
@@ -42,7 +42,7 @@
     <p>This mark was chosen to represent this cause because of its origin and the disposition it
         conveyed. It was found in the topic itself: Abortion. <span class="highlight">Turning the capital A on it’s side</span> posed a 
         powerful question (What is better than abortion) and created <span class="highlight">a beautiful empty space</span> that 
-        was <span class="highlight">inviting to the user.</span> This is an altogether different disposition than what we currently 
+        was <span class="highlight">inviting to the user,</span> <a href="{{ route('digital-interaction') }}"><span class="bold">give it a try!</span></a> This is an altogether different disposition than what we currently 
         possess and a different campaign functionality to that which we find in prochoice and prolife. 
         It’s not based on group use and instead of a campaign that tries to provide the answer, it 
         <span class="highlight">simply provides the question</span> and <span class="highlight">goes on to accept the fact that there are many answers 

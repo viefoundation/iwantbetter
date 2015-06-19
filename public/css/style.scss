@@ -195,11 +195,23 @@ html, body {
 	}
 
 	
+	#hero-video {
+
+		width:100%;
+		height:114%;
+
+		@include center;
+
+		@include breakpoint(medium) {
+			display: none;
+		}
+
+	}
 
 	#walkthrough-video {
 		width:100%;
 		height:114%;
-		
+
 		@include center;
 
 		@include breakpoint(medium) {
@@ -322,7 +334,7 @@ html, body {
 	p {
 		font-family: $opensans;
 		color:$text-color;
-		font-size: 1.1rem;
+		font-size: 1.2rem;
 		font-weight: normal;
 		margin-bottom: 20px;
 
@@ -822,6 +834,12 @@ nav {
 			font-family: $opensans;
 			font-size: 1.4rem;
 			margin-bottom: 20px;
+
+			&:hover {
+
+				text-decoration: underline;
+
+			}
 		}
 
 	}
@@ -955,12 +973,12 @@ nav {
 
 
 .footer {
-	position: fixed;
+	// position: fixed;
 	width:100%;
 	height:500px;
 	background-color: $gray; 
 	bottom: 0;
-	@include transform(translateY(500px));
+	// @include transform(translateY(500px));
 	// z-index:-9;
 	pointer-events:none;
 	

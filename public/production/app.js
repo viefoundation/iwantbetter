@@ -853,7 +853,7 @@ $(document).ready(function() {
 		Squares.init();
 		Posters.init();
 		Nav.init();
-		Walkthrough.init();
+		Walkthrough.twitter();
 		Paragraphs.init();
 		Twitter.init();
 		Pinterest.init();
