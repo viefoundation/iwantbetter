@@ -37,13 +37,13 @@
 
     <div class="hero" id="hero">
        
-        {{-- <div class="hero-content-container">
+        <div class="hero-content-container">
             <p class="heading uppercase"><span class="bold">Nobody really likes abortion</span>, so to be for something
                 better should be a lot easier than it is.</p>
             
             <a href="#paragraphs-background"><div class="read-more-button"><p>READ MORE</p></div></a>
             <a href="https://vimeo.com/105067552" target="_blank"><div class="read-more-button" id="video-button"><p>GALLERY</p></div></a>
-        </div> --}}
+        </div>
 
         <div class="arrow-down"><img src="{{ asset('img/arrow-down.png') }}"></div>
 

@@ -231,8 +231,16 @@ html, body {
 	font-family: $opensans;
 	color:white;
 	// @include transition(bottom .2s ease);
+	display: none;
+
+	@include breakpoint(medium) {
+
+		display: block;
+
+	}
 
 	@include breakpoint(small) {
+
 		width:75%;
 		left:35px;
 		bottom: 15%;
