@@ -34,7 +34,8 @@
 
             var CONFIG = {
 
-                page : '{{ Route::currentRouteName() }}'
+                page : '{{ Route::currentRouteName() }}',
+                submitStickerPath : '{{ route("submitStickerForm") }}'
 
             }
 

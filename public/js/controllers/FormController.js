@@ -22,7 +22,7 @@ app.controller('FormController', function($scope, $http) {
         $http({
 
             method: 'POST',
-            url: '{{ route("submitStickerForm") }}',
+            url: CONFIG.submitStickerPath,
             headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
             data: $.param(newStickerRequest)
 

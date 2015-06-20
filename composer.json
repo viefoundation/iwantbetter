@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"bradleyboy/laravel-braintree": "dev-master",
-		"way/generators": "~2.0"
+		"way/generators": "~2.0",
+		"guzzlehttp/guzzle": "~4.0"
 	},
 	"require-dev": {
 	    "way/generators": "~2.0"

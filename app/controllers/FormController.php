@@ -21,16 +21,26 @@ class FormController extends BaseController {
 
 		} catch (Exception $e) {
 
-			return Response::json([
-				'error' => App::environment()
-			], 404);
+			Log::error($e);
+
+			return Response::json(['error' => App::environment()], 404);
 
 		}
 
 
+		if (App::environment('production')) {
+
+			Mail::queue('emails.newOrder', ['name' => $full_name, 'address1' => $address, 'address2' => $address2, 'email' => $email], function($message) {
+			    
+			    $message->to('ilike@iwantbetter.org', 'I Want Better')->subject('New Sticker Order!');
+
+			});
+
+		}
+
 		Mail::queue('emails.newOrder', ['name' => $full_name, 'address1' => $address, 'address2' => $address2, 'email' => $email], function($message) {
 		    
-		    $message->to('ilike@iwantbetter.org', 'I Want Better')->cc('austenpayan@gmail.com')->subject('New Sticker Order!');
+		    $message->to('austenpayan@gmail.com', 'I Want Better')->subject('New Sticker Order!');
 
 		});
 
