@@ -1310,6 +1310,7 @@ button {
 	width: 30px;
 	@include transform(rotate(180deg));
 	display: none;
+	cursor: pointer;
 }
 
 

@@ -758,54 +758,43 @@ var Footer = {
 
  
 
-var scrollToTop = function(el) {
+ var headerEl = document.querySelector('.back-to-top');
 
- 
-};
+ var scrollToTop = function(el) {
+
+   el = typeof el === 'object' ? el : document.querySelector(el);
+   if (!el) { return; }
+
+   var offset = el.scrollTop;
+   if (offset === 0) { return; }
+
+   //el.style.overflow = 'hidden'; // stops momentum scrolling
+   var stepSize = offset / (offset < 1000 ?  15 : 30);
+
+   var _animate = function() {
+
+     el.scrollTop -= stepSize;
+
+     if (el.scrollTop > 0) { // keep scrolling up
+       setTimeout(_animate, 10);
+     }
+     else { // enough
+       _onFinish();
+     }
+   };
+
+   var _onFinish = function() {
+    // el.style.overflow = 'scroll'; 
+     
+   };
+
+   _animate();
+ };
 
 
-
-
-var ScrollUp = {
-
-	init : function() {
-
-		var headerEl = document.querySelector('.back-to-top');
-
-		headerEl.addEventListener('click', function() {
-
-			this.toTop('.container');
-
-		});
-
-	},
-
-	toTop : function(element) {
-
-		element = typeof element === 'object' ? element : document.querySelementector(element);
-		if (!element) { return; }
-
-		var offset = element.scrollTop;
-		if (offset === 0) { return; }
-
-		//element.style.overflow = 'hidden'; // stops momentum scrolling
-		var stepSize = offset / (offset < 1000 ?  15 : 30);
-
-		this.animate(element);
-
-	},
-
-	animate : function(element) {
-
-		element.scrollTop -= stepSize;
-
-		if (element.scrollTop > 0) { // keep scrolling up
-		  setTimeout(this.animate, 10);
-		}
-
-	}
-
-}
+ headerEl.addEventListener('click', function() {
+   window.scrollToTop('.container');
+ });
 
 
 function measureText(txt, font) {
@@ -858,7 +847,7 @@ $(document).ready(function() {
 		Twitter.init();
 		Pinterest.init();
 		Footer.init();
-		ScrollUp.init();
+		// ScrollUp.init();
 		ScrollTop.init();
 
 	}
