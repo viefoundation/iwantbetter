@@ -54,6 +54,8 @@
             <a href="https://twitter.com/share?url=http%3A%2F%2Fwww.vimeo.com%2F131256671&amp;text=A%20Better%20Way%20to%20Talk%20About%20Abortion." target="_blank" class="share-to-twitter"><i class="fa fa-twitter"></i></a>
         </div>
 
+        <iframe id="hero-video-mobile" src="https://player.vimeo.com/video/131256671?autoplay=1&loop=1&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
     </div>
     
 
