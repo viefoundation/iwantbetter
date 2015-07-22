@@ -763,9 +763,15 @@ var Footer = {
  };
 
 
- headerEl.addEventListener('click', function() {
-   window.scrollToTop('.container');
- });
+if (CONFIG.page === 'home') {
+
+	headerEl.addEventListener('click', function() {
+		window.scrollToTop('.container');
+	});
+
+}
+
+ 
 
 
 function measureText(txt, font) {

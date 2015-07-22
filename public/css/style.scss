@@ -155,7 +155,6 @@ html, body {
 	overflow: scroll;
 	position: relative;
 	z-index: 2;
-	// background-color: white;
 	-webkit-overflow-scrolling: touch;
 
 }
@@ -170,7 +169,6 @@ html, body {
 
 		height:40%;
 		height:40vh;
-		// pointer-events:none;
 
 	}
 
@@ -2068,6 +2066,13 @@ button {
 
 	}
 
+	@include breakpoint(1150px) {
+
+		width:95%;
+		height:60px;
+
+	}
+
 }
 
 .equation-title {
@@ -2090,6 +2095,18 @@ button {
 	@include breakpoint(1150px) {
 
 		font-size: 5rem;
+
+	}
+
+	@include breakpoint(1050px) {
+
+		font-size: 4rem;
+
+	}
+
+	@include breakpoint(small) {
+
+		font-size: 2rem;
 
 	}
 
@@ -2117,12 +2134,28 @@ button {
 		height:105px;
 		text-align: center;
 
+		@include breakpoint(small) {
+
+			border-bottom: 5px solid $di-theme;
+			border-radius: 0;
+			height:100%;
+			font-size: 30px;
+
+		}
+
 
 	}
 
 	@include breakpoint(1400px) {
 
 		width:400px;
+
+	}
+
+	@include breakpoint(small) {
+
+		width:40%;
+		height:50px;
 
 	}
 
