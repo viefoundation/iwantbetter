@@ -833,9 +833,15 @@ $(document).ready(function() {
 	if (CONFIG.page === 'digital-interaction') {
 
 		$("#di-user-input").keyup(function() {
-			console.log("bam");
+			
 	        shrinkToFill(this, '90', "", "Open Sans, sans-serif");
 	    });
+
+	}
+
+	if (CONFIG.page === 'interaction.show') {
+
+		shrinkToFill($("#di-user-input"), '90', "", "Open Sans, sans-serif")
 
 	}
 	

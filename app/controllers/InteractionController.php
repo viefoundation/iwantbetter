@@ -52,7 +52,9 @@ class InteractionController extends BaseController {
 	public function show($id)
 	{
 		
+		$interaction = Interaction::find($id);
 
+		return View::make('static-interaction', ['text' => $interaction->text]);
 
 	}
 

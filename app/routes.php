@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', ['as' => 'home', function()
+Route::get('/', ['as' => 'di-home', function()
 {
-	return View::make('main');
+	// return View::make('main');
+	return View::make('digital-interaction');
 }]);
 
 
@@ -72,6 +73,8 @@ Route::get('digital-interaction', ['as' => 'digital-interaction', function() {
 	return View::make('digital-interaction');
 
 }]);
+
+// Route::get('interaction/{id}', ['as' => 'interaction.show','uses' => 'InteractionController@show']);
 
 Route::resource('interaction', 'InteractionController', ['except' => ['create']]);
 
