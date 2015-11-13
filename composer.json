@@ -8,7 +8,8 @@
 		"bradleyboy/laravel-braintree": "dev-master",
 		"way/generators": "~2.0",
 		"guzzlehttp/guzzle": "~4.0",
-		"jonnyw/php-phantomjs": "3.*"
+		"jonnyw/php-phantomjs": "3.*",
+		"vlucas/phpdotenv": "^2.1"
 	},
 	"require-dev": {
 	    "way/generators": "~2.0"
@@ -46,4 +47,3 @@
 	},
 	"minimum-stability": "stable"
 }
-

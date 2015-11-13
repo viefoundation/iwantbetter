@@ -30,6 +30,10 @@ $env = $app->detectEnvironment(array(
 
 ));
 
+$dotenv = new Dotenv\Dotenv(__DIR__ . '/../');
+$dotenv->load();
+
+
 /*
 |--------------------------------------------------------------------------
 | Bind Paths

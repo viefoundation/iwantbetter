@@ -7,3 +7,4 @@ Thumbs.db
 vendor
 vendor/*
 public/.sass-cache
+.env
