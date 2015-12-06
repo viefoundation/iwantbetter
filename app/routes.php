@@ -17,6 +17,10 @@ Route::get('/', ['as' => 'di-home', function()
 	return View::make('digital-interaction');
 }]);
 
+Route::get('home', ['as' => 'home', function()
+{
+	return View::make('main');
+}]);
 
 
 Route::post('sticker', ['as' => 'submitStickerForm', 'uses' => 'FormController@submit']);

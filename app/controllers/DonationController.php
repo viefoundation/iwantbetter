@@ -10,8 +10,9 @@ class DonationController extends BaseController {
 	 */
 	public function create() {
 
-		$create_customer = Braintree_Customer::create([
+		if(!empty(Input::get('email_address_2'))) return false;
 
+		$create_customer = Braintree_Customer::create([
 			"firstName"       => Input::get('first_name'),
 			"lastName"        => Input::get('last_name'),
 			'email'           => Input::get('email_address'),

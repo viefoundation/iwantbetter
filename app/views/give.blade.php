@@ -11,8 +11,6 @@
 		<p><span class="green">If you need anything-</span> <br> <a href="mailto:ilike@iwantbetter.org"><span class="email">ilike@iwantbetter.org</span></a></p>
 		<p>I WANT BETTER is currently managed by: VIE - 501(c)(3) Non Profit Organization</p>
 		<p>All contributions are tax-deductible.</p>
-
-
 	</div>
 	<div class="column-right">
 		  <form action="{{ route('addCustomer') }}" method="POST" id="braintree-payment-form" class="form_style">
@@ -23,6 +21,10 @@
 		    <p class="give-email">
 		      <label for="email_address">Email Address</label>
 		      <input tabindex=2 placeholder="Email Address" type="text" name="email_address" id="email_address" value="Email Address" onfocus="if (this.value=='Email Address') this.value='';"></input>
+		    </p>
+		    <p class="give-email" style="display:none;">
+		      <label for="email_address_2">Email Address (if you are human, do not fill this out)</label>
+		      <input tabindex=2 placeholder="Email Address" type="text" name="email_address_2" id="email_address_2" value="Email Address"></input>
 		    </p>
 		    <p class="give-card">
 		      <label>Card Number</label>
