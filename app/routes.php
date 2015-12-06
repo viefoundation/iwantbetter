@@ -13,8 +13,8 @@
 
 Route::get('/', ['as' => 'di-home', function()
 {
-	// return View::make('main');
-	return View::make('digital-interaction');
+	return View::make('main');
+	// return View::make('digital-interaction');
 }]);
 
 Route::get('home', ['as' => 'home', function()
