@@ -813,7 +813,7 @@ function shrinkToFill(input, fontSize, fontWeight, fontFamily) {
 
 $(document).ready(function() {
 
-	if (CONFIG.page === 'home') {
+	if (CONFIG.page === 'home' || CONFIG.page === 'di-home') {
 
 		ShareIcons.init();
 		Squares.init();
