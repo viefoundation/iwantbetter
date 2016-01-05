@@ -81,13 +81,16 @@
 		      <label for="state">State</label>
 		      <input tabindex=9 placeholder="State"type="text" name="state" id="state" value="State" onfocus="if (this.value=='State') this.value='';"></input>
 		    </p>
-		    
 		    <p class="give-zip">
 		      <label for="postal_code">Postal Code</label>
 		      <input tabindex=10 placeholder="Zip" type="text" name="postal_code" id="postal_code" value="Zip" onfocus="if (this.value=='Zip') this.value='';"></input>
 		    </p>
 		    <p class="amount_text">Address collected for mailing year end statements.</p>
 		    
+		    <p class="give-captcha">
+		    	<div class="g-recaptcha" data-sitekey="6LfVghQTAAAAALGAUYD2cU1uGm8V7PGSSKWAzVKf"></div>
+		    </p>
+
 		    <input class="submit-button" type="submit" id="submit_button" value="Contribute"/>
 		  		 
 		</form>

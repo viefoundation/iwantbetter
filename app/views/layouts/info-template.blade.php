@@ -29,6 +29,16 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <script src="{{ asset('js/vendor/modernizr-2.6.2.min.js') }}"></script>
+        <script>    
+
+            var CONFIG = {
+
+                page : '{{ Route::currentRouteName() }}',
+                submitStickerPath : '{{ route("submitStickerForm") }}'
+
+            }
+
+        </script>
     </head>
 
     <body class="info-body">
@@ -116,5 +126,6 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </body>
 </html>
